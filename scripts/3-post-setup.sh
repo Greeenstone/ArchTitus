@@ -95,6 +95,8 @@ echo -ne "
                     Enabling Essential Services
 -------------------------------------------------------------------------
 "
+systemctl enable sshd
+echo "  SSH enabled"
 systemctl enable cups.socket
 echo "  Cups enabled"
 ntpd -qg

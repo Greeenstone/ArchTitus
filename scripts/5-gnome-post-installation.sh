@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+## swap-file:
+## execute as root
+# sudo su
+# cd /root
+# dd if=/def/zero of=/swapfile bs=1M count=2048 status=progress
+# chmod 600 /swapfile
+# mkswap /swapfile
+# cp /etc/stab /etc/fstab.bak
+# echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
+# mount -a
+
 # remove bell-beeb
 echo 'blacklist pcspkr' | sudo tee -a /etc/modprobe.d/nobeeb.conf
 
