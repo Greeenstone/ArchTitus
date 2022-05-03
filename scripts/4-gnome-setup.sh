@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
 # setup GIT
-git config --global user.email "lukasgraz@gmail.com"
+git config --global user.email "lukasgraz99@gmail.com"
 git config --global user.name "LukasGraz"
+ssh-keygen -t ed25519 -C "lukasgraz99@gmail.com"
+ssh-add ~/.ssh/id_ed25519
+# copy output of
+cat ~/.ssh/id_ed25519.pub  
+# and past the output to `GitHub -> Settings -> SSH and GPG Keys`
+ssh -T git@github.com # confirm with yes
 
 # disable Wayland
 sudo sed -i 's/^#WaylandEnable=false/WaylandEnable=false/' /etc/gdm/custom.conf
