@@ -1,3 +1,5 @@
 #! /usr/bin/bash
 
-gsettings list-recursively > ~/Documents/Hobby/ArchTitus/configs/gnome/full_gsettings
+
+gsettings list-recursively > ~/ArchTitus/configs/gnome/modified_gsettings
+

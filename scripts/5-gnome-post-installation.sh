@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# remove bell-beeb 
+# remove bell-beeb
 echo 'blacklist pcspkr' | sudo tee -a /etc/modprobe.d/nobeeb.conf
 
 # for ACER:
@@ -50,13 +50,26 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 
 
-# command start
-printf "n\ngdrive\n17\n449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com\n\n1\n\n\nn\ny" | rclone config
-n gdrive 17 449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com  1   n y
+# command start (execute by hand)
+printf " 
+n\n
+gdrive\n
+drive\n
+449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com\n
+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\n
+1\n\n\n
+n\n
+y\n" | rclone config
+rclone copy gdrive:AcerDacer ~/Documents
+# setup cron-job
+# ...
 
-rclone config create gdrive drive --client-key="449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com"
+# for link-forwarding (open links with firefox)
+sudo pacman -S xdg-utils 
 
-
-rclone config delete gdrive
-
-sudo pacman -S xdg-utils # for link-forwarding (open links with firefox)
+# get gsettings
+gsettings list-recursively > ~/ArchTitus/configs/gnome/temp_gsettings
+cat ~/ArchTitus/configs/gnome/modified_gsettings | while read line
+do
+  gsettings set $line
+done

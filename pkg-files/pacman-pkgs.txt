@@ -37,7 +37,7 @@ avahi
 btrfs-progs
 # celluloid
 # cmatrix
-code
+# code
 cronie
 cups
 dialog
