@@ -13,12 +13,21 @@ ssh -T git@github.com # confirm with yes
 # disable Wayland
 sudo sed -i 's/^#WaylandEnable=false/WaylandEnable=false/' /etc/gdm/custom.conf
 
+
 # fix KEYMAP
 gsettings reset org.gnome.desktop.input-sources sources
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'de+nodeadkeys')]"
 
 # SHORTCUTS
 python3 ~/ArchTitus/scripts/add_gnome_shortcut.py 'open guake' 'guake' '<Super>e'
+
+# PIP / Python-modules
+pip install radian
+
+
+# setup touchpad with natural scrolling
+    sudo pacman -S --noconfirm --needed   xf86-input-synaptics
+    sudo cp ~/ArchTitus/configs/etc/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
 
 
 #######################################

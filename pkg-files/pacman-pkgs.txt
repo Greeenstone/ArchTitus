@@ -83,10 +83,11 @@ os-prober
 # picom
 pkgconf
 # powerline-fonts
+python
 # python-notify2
 # python-psutil
 # python-pyqt5
-# python-pip
+python-pip
 # qemu
 # snap-pac
 # snapper
@@ -127,7 +128,6 @@ openvpn
 networkmanager
 networkmanager-openconnect
 networkmanager-openvpn
-python
 firefox
 iwd
 rclone

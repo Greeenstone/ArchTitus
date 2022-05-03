@@ -48,6 +48,11 @@ cp -an /etc/default/grub /etc/default/grub.bak
 # grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
 # echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
 echo -e "Updating grub..."
+# skip grub menu
+sed -i 's/^GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub
+if [[ $PARTITION_STRATEGY == "Dual_Boot" ]]; then
+  sed -i 's/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub
+fi
 grub-mkconfig -o /boot/grub/grub.cfg
 echo -e "All set!"
 
