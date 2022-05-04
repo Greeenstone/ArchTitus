@@ -26,7 +26,7 @@ echo 'blacklist pcspkr' | sudo tee -a /etc/modprobe.d/nobeeb.conf
 
 
 # get internet connection
-    printf 'station wlan0 connect "Krosse Krabbe 5GHz"\nsehrkomplex\nquit\n' | iwctl
+#    printf 'station wlan0 connect "Krosse Krabbe 5GHz"\nsehrkomplex\nquit\n' | iwctl
 
 # init extensions
 init-extension () {
@@ -55,7 +55,7 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 # go here: https://console.cloud.google.com/apis/credentials?project=psyched-circuit-342100
 # to get:
     # clienet id
-    449832985581-n8rqi12a5sc4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com
+    449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com
     #client secret
     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
 
@@ -76,7 +76,7 @@ rclone copy gdrive:AcerDacer ~/Documents
 # ...
 
 # for link-forwarding (open links with firefox)
-sudo pacman -S xdg-utils 
+# sudo pacman -S xdg-utils 
 
 # get gsettings
 gsettings list-recursively > ~/ArchTitus/configs/gnome/temp_gsettings

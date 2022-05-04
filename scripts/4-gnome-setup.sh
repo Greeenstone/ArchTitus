@@ -4,6 +4,8 @@
 git config --global user.email "lukasgraz99@gmail.com"
 git config --global user.name "LukasGraz"
 ssh-keygen -t ed25519 -C "lukasgraz99@gmail.com"
+sudo chmod 755 ~/.ssh
+sudo chmod 600 ~/.ssh/id_ed25519
 ssh-add ~/.ssh/id_ed25519
 # copy output of
 cat ~/.ssh/id_ed25519.pub  
@@ -26,9 +28,14 @@ pip install radian
 
 
 # setup touchpad with natural scrolling
-    sudo pacman -S --noconfirm --needed   xf86-input-synaptics
     sudo cp ~/ArchTitus/configs/etc/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
 
+# R setup
+touch ~/.profile
+sudo pacman -S --noconfirm --needed gcc-fortran # to compile pacages
+sudo chmod -R 777 /usr/lib/R/library # make library free for alls
+# temp="`R --version`" && temp=${temp:10:3}
+# echo "export R_LIBS_USER=/home/lukas/R/x86_64-pc-linux-gnu-library/$temp" >> ~/.profile
 
 #######################################
 ###  EXTENSIONS
@@ -49,3 +56,4 @@ printf "$GNOME_VERSION\nq" | gnome-shell-extension-installer 1112 # screenshot t
 printf "$GNOME_VERSION\nq" | gnome-shell-extension-installer 3088 # Extension list
 printf "$GNOME_VERSION\nq" | gnome-shell-extension-installer 906 # Sound output chooser
 
+reboot

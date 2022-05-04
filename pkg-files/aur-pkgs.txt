@@ -30,5 +30,5 @@ superproductivity-bin
 # teamviewer
 # timeshift
  visual-studio-code-bin
-zotero
+zotero-bin
 zoom
