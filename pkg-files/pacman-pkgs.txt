@@ -30,9 +30,9 @@ avahi
 # bash-completion
 # bind
 ## bison
-# bluez
-# bluez-libs
-# bluez-utils
+bluez
+bluez-libs
+bluez-utils
 # bridge-utils
 btrfs-progs
 # celluloid
@@ -138,10 +138,11 @@ obs-studio
 # okular
 qgis
 r
+translate-shell
 sane
 gscan2pdf
 # TEXLIVE-MOST:
-#texlive-bibtexextra
+texlive-bibtexextra
 texlive-core
 #texlive-fontsextra
 #texlive-formatsextra
@@ -153,3 +154,5 @@ texlive-latexextra
 #texlive-pstricks
 #texlive-publishers
 texlive-science
+libreoffice-still
+jre-openjdk

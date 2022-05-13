@@ -15,10 +15,24 @@ ssh -T git@github.com # confirm with yes
 # disable Wayland
 sudo sed -i 's/^#WaylandEnable=false/WaylandEnable=false/' /etc/gdm/custom.conf
 
+# bluetooth
+rfkill unblock all #unblock bluetooth is soft-blocked
+bltid="38:18:4C:DA:A8:55" # WH-910N
+bluetoothctl power on
+bluetoothctl pair $bltid
+bluetoothctl trust $bltid
+# bluetoothctl connect $bltid
+touch .connect_wh910n.sh
+cp ~/ArchTitus/configs/.connect_wh910n ~/.connect_wh910n.sh
+chmod +x .connect_wh910n.sh
+# add bluetooth shortcut
+python3 ~/ArchTitus/scripts/add_gnome_shortcut.py 'connect wh910' '~/.connect_wh910n.sh' '<Super>h'
 
 # fix KEYMAP
 gsettings reset org.gnome.desktop.input-sources sources
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'de+nodeadkeys')]"
+localectl set-x11-keymap de acer_laptop
+# if ctl+. gives e_ then type `ibus-setup` and ggo to emoji and disable shortcut
 
 # SHORTCUTS
 python3 ~/ArchTitus/scripts/add_gnome_shortcut.py 'open guake' 'guake' '<Super>e'
@@ -26,8 +40,15 @@ python3 ~/ArchTitus/scripts/add_gnome_shortcut.py 'open guake' 'guake' '<Super>e
 # PIP / Python-modules
 pip install radian
 
+# for latex
+sudo pacman -S cpanminus
+sudo cpan Unicode::GCString
+sudo cpan App::cpanminus
+sudo cpan YAML::Tiny
+sudo perl -MCPAN -e 'install "File::HomeDir"'
 
-# setup touchpad with natural scrolling
+
+# fix touchpad
     sudo cp ~/ArchTitus/configs/etc/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
 
 # R setup

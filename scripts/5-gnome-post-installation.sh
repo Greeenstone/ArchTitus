@@ -11,6 +11,10 @@
 # echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 # mount -a
 
+# loginscreen layout
+localectl set-x11-keymap de acer_laptop nodeadkeys
+sudo localectl set-x11-keymap de acer_laptop nodeadkeys
+
 # remove bell-beeb
 echo 'blacklist pcspkr' | sudo tee -a /etc/modprobe.d/nobeeb.conf
 
