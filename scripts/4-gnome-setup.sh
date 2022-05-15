@@ -23,7 +23,7 @@ bluetoothctl pair $bltid
 bluetoothctl trust $bltid
 # bluetoothctl connect $bltid
 touch .connect_wh910n.sh
-cp ~/ArchTitus/configs/.connect_wh910n ~/.connect_wh910n.sh
+cp ~/ArchTitus/configs/config_files/bluetooth/.connect_wh910n ~/.connect_wh910n.sh
 chmod +x .connect_wh910n.sh
 # add bluetooth shortcut
 python3 ~/ArchTitus/scripts/add_gnome_shortcut.py 'connect wh910' '~/.connect_wh910n.sh' '<Super>h'
