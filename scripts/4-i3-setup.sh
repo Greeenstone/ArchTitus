@@ -44,7 +44,7 @@ sudo pacman -S ttc-iosevka # font
 sudo pacman -S otf-font-awesome #font
 yay xst-git
 
-CDIR=~/Desktop/dotfiles/config
+CDIR=~/ArchTitus/configs/config_files/
 for dir in dunst i3 i3blocks rofi scripts sound; do
 rm -r .config/${dir}
 ln -rs ${CDIR}/${dir} ~/.config/
