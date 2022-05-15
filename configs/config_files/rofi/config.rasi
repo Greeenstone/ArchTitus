@@ -1,12 +1,17 @@
-/** Basic config file **/
+
 
 configuration {
-  modi:			"run,drun,window";
-  show-icons:         	true;
-  icon-theme:         	"Classic95";
-  display-drun:  	"Search: ";
-  display-window: 	"Switch to: ";
-  display-run:  	"Run: ";
+	modi: "run,window,windowcd,drun";
+  combi-modi: "window,windowcd,run";
+	font: "JetBrains Mono 12";
+  width: 900px;
+      border-color: #2e343f;
+   show-icons: true;
+  icon-theme: "Papirus";
+    display-drun: "";
+  drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+ 
 }
 
-@theme "autofool.rasi"
+
+@theme "slate"

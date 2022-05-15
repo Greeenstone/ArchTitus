@@ -46,12 +46,19 @@ yay xst-git
 
 CDIR=~/ArchTitus/configs/config_files/
 for dir in dunst i3 i3blocks rofi scripts sound bluetooth; do
-rm -r .config/${dir}
-ln -rs ${CDIR}/${dir} ~/.config/
+rm -r ~/.config/${dir}
+# ln -rs ${CDIR}/${dir} ~/.config/
 done
 
 # copy all files from "$CDIR/homedir" to "~/"
 for f in `ls $CDIR/homedir/`; do
 rm -r ~/$f
-ln -rs ${CDIR}/homedir/$f ~/$f
+# ln -rs ${CDIR}/homedir/$f ~/$f
 done
+
+sudo pacman -S papirus-icon-theme
+
+# Terminal
+sudo pacman -S rxvt-unicode
+sudo pacman -S urxvt-perls
+yay -S urxvt-resize-font-git

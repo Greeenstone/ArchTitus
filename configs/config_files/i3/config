@@ -1,4 +1,5 @@
-###### KEYBINDS ######
+#! /bin/bash  # <-- to trick vs code
+##### KEYBINDS ######
 ##
 ##
 	# Super in Mod4 and Alt is Mod1
@@ -110,16 +111,36 @@
 ###### THEME ######
 ##
 ##
+	set_from_resource $darkblack	color0  #000000
+	set_from_resource $black	color8  #000000
+	set_from_resource $darkred	color1  #000000
+	set_from_resource $red		color9  #000000
+	set_from_resource $darkgreen	color2  #000000
+	set_from_resource $green	color10 #000000
+	set_from_resource $darkyellow	color3  #000000
+	set_from_resource $yellow	color11 #000000
+	set_from_resource $darkblue	color4  #000000
+	set_from_resource $blue		color12 #000000
+	set_from_resource $darkmagenta	color5  #000000
+	set_from_resource $magenta	color13 #000000
+	set_from_resource $darkcyan	color6  #000000
+	set_from_resource $cyan		color14 #000000
+	set_from_resource $darkwhite	color7  #000000
+	set_from_resource $white	color15 #000000
+	set $transparent		#00000000
+
+	# Window color theme
+	#                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
+	client.focused		$red		$red		$magenta		$darkmagenta		$darkblue
+	client.unfocused		$transparent		$blue      $white      $darkblue		$transparent
+	client.focused_inactive	$transparent		$blue      $white      $darkblue		$transparent
+	client.urgent		$darkred	$darkred		$black		$darkred		$darkred
+	client.background $black
+
 	# Font
 	font pango:Iosevka Extended Bold 10
 
-	# Window color theme
-	# class                 border	bground text 	indicator child_border
-	client.focused          #101818 #101818 #555555 #AA0055   #999999
-	client.focused_inactive #101818 #101818 #555555 #885500   #101818
-	client.unfocused        #101818 #101818 #555555 #550088   #101818
-	client.urgent           #AA0055 #101818 #AAAAAA #55AA00   #AA0055
-	client.placeholder      #AA0055 #101818 #AAAAAA #55AA00   #AA0055
+
 
 	# default_border pixel 2
 	title_align center
@@ -153,17 +174,15 @@
 	    # The default just shows the current date and time.
 	    status_command i3blocks
 
-	    colors {
-		background #101818
-		statusline #888880
-
-
-		focused_workspace  #101818 #101818 #EEEEEE
-		active_workspace   #101818 #101818 #EEEEEE
-		inactive_workspace #101818 #101818 #555555
-		urgent_workspace   #101818 #101818 #EE55AA
-		binding_mode       #101818 #101818 #EE55AA
-	    }
+		colors {
+				background $darkblack
+				statusline $darkwhite
+				separator $cyan
+				focused_workspace  $blue $darkblue $darkwhite
+					active_workspace   $blue $darkblue $darkwhite
+					inactive_workspace $darkblack $darkblack $white
+					urgent_workspace   $darkblack $darkblack $white
+			}
 	}
 
 
@@ -173,7 +192,7 @@
 ##
 ##
 	# Terminal
-	bindsym $super+Return exec --no-startup-id xst &
+	bindsym $super+Return exec --no-startup-id urxvt &
 
 	# File manager
 	bindsym $super+Shift+f exec --no-startup-id xst -e ranger &
@@ -204,7 +223,8 @@
 	bindsym Shift+Print exec --no-startup-id ~/.config/scripts/screenshot/i3_region.sh &
 	
 	# Launcher
-	bindsym --release Super_L exec --no-startup-id ~/.config/rofi/launchRofi.sh &
+	
+	bindsym --release Super_L exec --no-startup-id rofi -no-lazy-grab -show drun -theme "~/.config/rofi/searcher.rasi" -icon-theme "Papirus" #-kb-cancel "Escape,Super_L"
 	bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 	# Scan Wifi
@@ -223,9 +243,10 @@
 
 # tab through workspaces
 bindsym $mod+Tab workspace next
-# bindsym $mod+Shift+Tab workspace prev
-bindsym $mod+^^ workspace prev
-
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+asciicircum workspace prev
+bindsym $alt+asciicircum workspace back_and_forth
+bindsym $alt+Tab exec rofi -show "window" &
 
 
 ###### AUTOSTART APPLICATIONS ######
@@ -235,6 +256,8 @@ bindsym $mod+^^ workspace prev
         exec feh --bg-scale ~/.wallpaper.jpg
         exec firefox
         exec autorandr --change # for automatic display (profile) detection
+		exec code
+		exec guake
 		
 
 # autoconfigure apps 
@@ -272,3 +295,5 @@ bindsym $mod+^^ workspace prev
 		bindsym Escape mode "default"
 	}
 	bindsym $mod+Pause mode "$mode_system" 
+
+
