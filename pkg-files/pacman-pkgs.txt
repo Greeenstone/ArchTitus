@@ -129,6 +129,8 @@ networkmanager
 networkmanager-openconnect
 networkmanager-openvpn
 firefox
+netctl
+iw
 iwd
 rclone
 rambox

@@ -1,0 +1,12 @@
+/** Basic config file **/
+
+configuration {
+  modi:			"run,drun,window";
+  show-icons:         	true;
+  icon-theme:         	"Classic95";
+  display-drun:  	"Search: ";
+  display-window: 	"Switch to: ";
+  display-run:  	"Run: ";
+}
+
+@theme "autofool.rasi"
