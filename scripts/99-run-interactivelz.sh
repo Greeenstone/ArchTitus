@@ -1,4 +1,5 @@
 # setup GIT
+    sudo pacman -S gnome-keyring libsecret libgnome-keyring # needed for vscode-ssh authentifications
     git config --global user.email "lukasgraz99@gmail.com"
     git config --global user.name "LukasGraz"
     ssh-keygen -t ed25519 -C "lukasgraz99@gmail.com"
