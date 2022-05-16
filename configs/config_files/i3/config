@@ -215,10 +215,11 @@ bindsym $alt+Tab exec rofi -show "window" &
 ##
 ##
 		exec --no-startup-id dunst & # notification manager
-        exec feh --bg-scale ~/.wallpaper.jpg &
         exec firefox &
         exec autorandr --change & # for automatic display (profile) detection
 		exec code &
+		exec nm-applet & # networkmanager
+        exec_always feh --bg-scale ~/.wallpaper.jpg
 		# exec guake &
 		
 

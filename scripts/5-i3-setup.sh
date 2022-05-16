@@ -41,29 +41,7 @@ sudo pacman -S light
 sudo pacman -S ttc-iosevka # font
 sudo pacman -S otf-font-awesome #font
 
-
-# backup and update config files
-    # copy dirs from "$CDIR" to "~/.config/"
-    CDIR=~/ArchTitus/configs/config_files/
-    timestamp=$(date +%Y-%m-%d_%H-%M-%S)
-    backup_dir="~/.config/conf_backups/backup_$timestamp"
-    mkdir -p backupdir
-    for dir in dunst i3 i3blocks rofi scripts sound bluetooth; do
-    echo "removing and linking the director: ~/.config/$dir"
-    cp -r ~/.config/${dir} $backup_dir
-    rm -r ~/.config/${dir}
-    ln -rs ${CDIR}/${dir} ~/.config/
-    done
-
-    # copy all files from "$CDIR/homedir" to "~/"
-    for f in `ls --almost-all $CDIR/homedir/`; do
-    echo "removing and linking the file: $f"
-    mkdir $backup_dir/homedir
-    cp -r ~/$f $backup_dir/homedir
-    rm -r ~/$f
-    ln -rs ${CDIR}/homedir/$f ~/$f
-    done
-
+~/ArchTitus/link_config.sh
 
 sudo pacman -S papirus-icon-theme
 

@@ -1,0 +1,2 @@
+# sync ~/Documents with gdrive:AcerDacer/
+* */2 * * * /home/lukas/.rclone_gdrive > /dev/null

@@ -1,4 +1,4 @@
-# first install pipewire to avoid pulseaudio
+# audio --- first install pipewire to avoid pulseaudio
 alsa-utils
 alsa-plugins
 pipewire 
@@ -6,6 +6,8 @@ pipewire-jack
 pipewire-alsa 
 pipewire-pulse
 gst-plugin-pipewire 
+sof-firmware
+#
 xorg-server
 xorg-apps
 xorg-xinit
@@ -61,7 +63,7 @@ networkmanager-openvpn
 firefox
 netctl
 rclone
-#### FONTS
+#### FONTS --------
 noto-fonts
 ttf-ubuntu-font-family
 ttf-dejavu
@@ -77,7 +79,7 @@ qgis
 translate-shell
 sane
 gscan2pdf
-# TEXLIVE-MOST:
+# TEXLIVE-MOST-------
 texlive-bibtexextra
 texlive-core
 #texlive-fontsextra

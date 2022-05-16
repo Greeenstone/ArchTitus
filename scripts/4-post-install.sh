@@ -2,7 +2,20 @@
     sudo sed -i -e '$aDefaults env_keep += PYTHONPATH' /etc/sudoers
     sudo sed -i -e '$aDefaults editor=/usr/bin/nano' /etc/sudoers
 
-    
+
+# remove bell-beeb
+    echo 'blacklist pcspkr' | sudo tee -a /etc/modprobe.d/nobeeb.conf
+
+# for ACER:
+    # fix sound
+    sudo rm /etc/modprobe.d/sound.conf
+    echo "options snd-intel-dspcfg dsp_driver=1" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
+    echo "options snd-hda-intel model=dell-headset-multi" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
+    echo "options snd-hda-intel dmic_detect=0 " | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
+    echo "options snd-hda-intel model=laptop-amic enable=yes" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
+    echo "options snd-hda-intel power_save=0" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
+
+
 
 ### Improve laptop battery consumption
    sudo pacman -S tlp tlp-rdw powertop acpi

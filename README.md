@@ -19,3 +19,9 @@ eg:
 |sda5    |1M  |    ef02  |  BIOSBOOT   |       
 |sda6    |300M|    ef00  |  EFIBOOT    |      
 |sda8    |100G|          |  ROOT       |   
+
+## config files
+my dotfiles are in configs/config_files/*  
+note that `configs/config_files/homedir` contains the files that are to be linked into `~/`.  
+initialize by running: `/.link_config.sh`
+
