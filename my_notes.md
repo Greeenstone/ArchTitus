@@ -36,14 +36,6 @@ xfce.txt
     Defaults env_keep +="PYTHONPATH"
     Defaults editor=/usr/bin/nano
 
-### Sudo no password
-just comment lines in setup.sh?
-### US to DE/CH
-LOCALE_IDENTIFIER="en_US.UTF-8 UTF-8"
-and in `1-setup.sh` set:
-`sed -i 's/^#$LOCALE_IDENTIFIER/$LOCALE_IDENTIFIER/' /etc/locale.gen`
-### delete zsh
-in `2-user.sh`
 ### turn of terminal bell/beep
 ## Gnome-shell-extensions
 ### Install 

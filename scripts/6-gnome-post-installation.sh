@@ -11,9 +11,6 @@
 # echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 # mount -a
 
-# loginscreen layout
-localectl set-x11-keymap de acer_laptop nodeadkeys
-sudo localectl set-x11-keymap de acer_laptop nodeadkeys
 
 # remove bell-beeb
 echo 'blacklist pcspkr' | sudo tee -a /etc/modprobe.d/nobeeb.conf
@@ -56,31 +53,7 @@ init-extension gnome-shell-screenshot@ttll.de
 # compile schemas (which are linked)
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
-# go here: https://console.cloud.google.com/apis/credentials?project=psyched-circuit-342100
-# to get:
-    # clienet id
-    449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com
-    #client secret
-    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
 
-
-
-# command start (execute by hand)
-printf " 
-n\n
-gdrive\n
-drive\n
-449832985581-n8rqi12a5c4d7r0buhrfh727rf3ngdfc.apps.googleusercontent.com\n
-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\n
-1\n\n\n
-n\n
-y\n" | rclone config
-rclone copy gdrive:AcerDacer ~/Documents
-# setup cron-job
-# ...
-
-# for link-forwarding (open links with firefox)
-# sudo pacman -S xdg-utils 
 
 # get gsettings
 gsettings list-recursively > ~/ArchTitus/configs/gnome/temp_gsettings

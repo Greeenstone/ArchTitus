@@ -53,11 +53,14 @@ echo -ne "
 Setting up mirrors for optimal download"
 iso=$(curl -4 ifconfig.co/country-iso) #X output: "CH
 timedatectl set-ntp true
-pacman -S --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
+
+#update keyrings to latest to prevent packages failing to install
+pacman -S --noconfirm --needed archlinux-keyring 
 pacman -S --noconfirm --needed pacman-contrib terminus-font
-setfont ter-v22b #X change font
+
+
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
-pacman -S --noconfirm --needed reflector rsync grub
+pacman -S --noconfirm --needed reflector grub rsync
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 echo -ne "
 -------------------------------------------------------------------------
@@ -178,11 +181,10 @@ echo -ne "
                     Arch Install on Main Drive
 -------------------------------------------------------------------------
 "
-pacstrap /mnt base base-devel linux linux-headers linux-firmware nano sudo archlinux-keyring wget libnewt --noconfirm --needed
+pacstrap /mnt base base-devel linux linux-headers linux-firmware nano sudo archlinux-keyring wget --noconfirm --needed
 echo "keyserver hkp://keyserver.ubuntu.com" >> /mnt/etc/pacman.d/gnupg/gpg.conf
 cp -R ${SCRIPT_DIR} /mnt/root/ArchTitus
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
-#X dual boot hier? os-prober????
 genfstab -L /mnt >> /mnt/etc/fstab
 echo " 
   Generated /etc/fstab:

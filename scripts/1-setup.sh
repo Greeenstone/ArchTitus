@@ -19,7 +19,9 @@ echo -ne "
                     Network Setup 
 -------------------------------------------------------------------------
 "
-pacman -S --noconfirm --needed networkmanager dhclient #X dhcclient unnecessary?
+pacman -S --noconfirm --needed openssh dhcpcd networkmanager network-manager-applet
+systemctl enable --now sshd
+systemctl enable --now dhcpcd
 systemctl enable --now NetworkManager
 echo -ne "
 -------------------------------------------------------------------------
@@ -27,7 +29,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 pacman -S --noconfirm --needed pacman-contrib curl
-pacman -S --noconfirm --needed reflector rsync grub arch-install-scripts git
+pacman -S --noconfirm --needed rsync grub arch-install-scripts git
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
 nc=$(grep -c ^processor /proc/cpuinfo)
@@ -48,24 +50,22 @@ echo -ne "
                     Setup Language to DE and set locale  
 -------------------------------------------------------------------------
 "
-# my locale on my ACER:
-#    System Locale: LANG=en_US.UTF-8
-#                   LC_TIME=de_CH.UTF-8
-#        VC Keymap: de-latin1-nodeadkeys
-#       X11 Layout: de
-#        X11 Model: acer_laptop
-#      X11 Variant: nodeadkeys
-# 
-sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+# sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sed -i 's/^#de_CH.UTF-8 UTF-8/de_CH.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 touch /etc/locale.conf
 echo "LANG=en_US.UTF-8" | tee -a /etc/locale.conf
-echo "LC_TIME=de_CH.UTF-8" | tee -a /etc/locale.conf
-timedatectl --no-ask-password set-timezone ${TIMEZONE}
-timedatectl --no-ask-password set-ntp 1
-# localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="en_US.UTF-8"
-localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="de_CH.UTF-8"
+echo "LANGUAGE=en_US" | tee -a /etc/locale.conf
+echo "LC_ALL=C" | tee -a /etc/locale.conf
+# echo "LC_TIME=de_CH.UTF-8" | tee -a /etc/locale.conf
+
+# Timezone
+    ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime
+    hwclock —-systohc
+    # timedatectl --no-ask-password set-timezone ${TIMEZONE}
+    # timedatectl --no-ask-password set-ntp 1
+    # localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="en_US.UTF-8"
+    # localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="de_CH.UTF-8"
 ln -s /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
 # Set keymaps
 touch /etc/vconsole
@@ -122,23 +122,23 @@ elif grep -E "AuthenticAMD" <<< ${proc_type}; then
     proc_ucode=amd-ucode.img
 fi
 
-echo -ne "
--------------------------------------------------------------------------
-                    Installing Graphics Drivers
--------------------------------------------------------------------------
-"
-# Graphics Drivers find and install
-gpu_type=$(lspci)
-if grep -E "NVIDIA|GeForce" <<< ${gpu_type}; then
-    pacman -S --noconfirm --needed nvidia
-	nvidia-xconfig
-elif lspci | grep 'VGA' | grep -E "Radeon|AMD"; then
-    pacman -S --noconfirm --needed xf86-video-amdgpu
-elif grep -E "Integrated Graphics Controller" <<< ${gpu_type}; then
-    pacman -S --noconfirm --needed libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-utils lib32-mesa
-elif grep -E "Intel Corporation UHD" <<< ${gpu_type}; then
-    pacman -S --needed --noconfirm libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-utils lib32-mesa
-fi
+# echo -ne "
+# -------------------------------------------------------------------------
+#                     Installing Graphics Drivers
+# -------------------------------------------------------------------------
+# "
+# # Graphics Drivers find and install
+# gpu_type=$(lspci)
+# if grep -E "NVIDIA|GeForce" <<< ${gpu_type}; then
+#     pacman -S --noconfirm --needed nvidia
+# 	nvidia-xconfig
+# elif lspci | grep 'VGA' | grep -E "Radeon|AMD"; then
+#     pacman -S --noconfirm --needed xf86-video-amdgpu
+# elif grep -E "Integrated Graphics Controller" <<< ${gpu_type}; then
+#     pacman -S --noconfirm --needed libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-utils lib32-mesa
+# elif grep -E "Intel Corporation UHD" <<< ${gpu_type}; then
+#     pacman -S --needed --noconfirm libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-utils lib32-mesa
+# fi
 
 echo -ne "
 -------------------------------------------------------------------------
@@ -192,8 +192,8 @@ echo -ne "
 "
 if [ $(whoami) = "root"  ]; then
     groupadd libvirt
-    useradd -m -G wheel,libvirt -s /bin/bash $USERNAME 
-    echo "$USERNAME created, home directory created, added to wheel and libvirt group, default shell set to /bin/bash"
+    useradd -m -G wheel,libvirt,storage,power,audio -s /bin/bash $USERNAME 
+    echo "$USERNAME created, home directory created, added to wheel storage, power, audio and libvirt group, default shell set to /bin/bash"
 
 # use chpasswd to enter $USERNAME:$password
     echo "$USERNAME:$PASSWORD" | chpasswd

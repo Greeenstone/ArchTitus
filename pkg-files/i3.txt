@@ -1,0 +1,25 @@
+# get i3 package group
+i3-wm  i3blocks  i3lock i3status
+# login-screen
+lightdm lightdm-gtk-greeter
+# for media keybindings
+playerctl pamixer
+rofi
+# networkmanager gui
+network-manager-applet
+# wallpaper
+feh
+# monitors
+arandr autorandr 
+# notifications:
+libnotify dunst
+# screenshot
+scrot
+# file manager
+ranger rox
+numlockx
+# terminal
+rxvt-unicode
+--END OF MINIMAL INSTALL--
+# arc-gtk-theme
+# papirus-icon-theme
