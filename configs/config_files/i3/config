@@ -128,12 +128,8 @@
 ##
 ##
     # exec --no-startup-id $HOME/.config/scripts/actions/load_x_prop.sh
-	
 
-###### WALLPAPER ######
-##
-##
-	# exec --no-startup-id feh --bg-fill ~/.config/wallpaper.jpg &
+
 
 
 ###### STATUSBAR ######
@@ -190,7 +186,7 @@
 	
 	# Launcher
 	
-	bindsym --release Super_L exec --no-startup-id rofi -no-lazy-grab -show drun -theme "~/.config/rofi/searcher.rasi" -icon-theme "Papirus" -kb-cancel "Escape,Super_L"
+	bindsym --release Super_L exec --no-startup-id ~/.config/rofi/super_menu.sh &
 	bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 	# Scan Wifi
@@ -219,11 +215,11 @@ bindsym $alt+Tab exec rofi -show "window" &
 ##
 ##
 		exec --no-startup-id dunst & # notification manager
-        exec feh --bg-scale ~/.wallpaper.jpg
-        exec firefox
-        exec autorandr --change # for automatic display (profile) detection
-		exec code
-		exec guake
+        exec feh --bg-scale ~/.wallpaper.jpg &
+        exec firefox &
+        exec autorandr --change & # for automatic display (profile) detection
+		exec code &
+		# exec guake &
 		
 
 # autoconfigure apps 

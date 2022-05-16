@@ -16,7 +16,7 @@ libnotify dunst
 # screenshot
 scrot
 # file manager
-ranger rox
+ranger
 numlockx
 # terminal
 rxvt-unicode

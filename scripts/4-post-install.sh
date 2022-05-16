@@ -1,3 +1,8 @@
+# sudoers changes
+    sudo sed -i -e '$aDefaults env_keep += PYTHONPATH' /etc/sudoers
+    sudo sed -i -e '$aDefaults editor=/usr/bin/nano' /etc/sudoers
+
+    
 
 ### Improve laptop battery consumption
    sudo pacman -S tlp tlp-rdw powertop acpi

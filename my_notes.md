@@ -33,7 +33,7 @@ xfce.txt
 
 ## configs:
 - visudo add:
-    Defaults env_keep +="PYTHONPATH"
+    Defaults env_keep += PYTHONPATH
     Defaults editor=/usr/bin/nano
 
 ### turn of terminal bell/beep

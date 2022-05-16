@@ -23,7 +23,8 @@ lshw
 unzip
 htop
 wget
-
+# for "man" command
+man-db
 ### old end of minimal
 # awesome-terminal-fonts
 bluez
