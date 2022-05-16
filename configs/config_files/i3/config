@@ -190,7 +190,7 @@
 	
 	# Launcher
 	
-	bindsym --release Super_L exec --no-startup-id rofi -no-lazy-grab -show drun -theme "~/.config/rofi/searcher.rasi" -icon-theme "Papirus" #-kb-cancel "Escape,Super_L"
+	bindsym --release Super_L exec --no-startup-id rofi -no-lazy-grab -show drun -theme "~/.config/rofi/searcher.rasi" -icon-theme "Papirus" -kb-cancel "Escape,Super_L"
 	bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 	# Scan Wifi

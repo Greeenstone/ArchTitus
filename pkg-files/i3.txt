@@ -20,6 +20,7 @@ ranger rox
 numlockx
 # terminal
 rxvt-unicode
+# themes
+papirus-icon-theme
+arc-gtk-theme
 --END OF MINIMAL INSTALL--
-# arc-gtk-theme
-# papirus-icon-theme
