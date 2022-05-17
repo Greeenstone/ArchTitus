@@ -117,6 +117,7 @@ sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 # rm -r $HOME/ArchTitus
 # rm -r /home/$USERNAME/ArchTitus
+rm /home/$USERNAME/ArchTitus/configs/setup.conf # remove password!
 
 # Replace in the same state
 cd $pwd
