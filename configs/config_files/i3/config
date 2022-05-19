@@ -28,7 +28,7 @@
         set $ws7 "7"
         set $ws8 "8"
         set $ws9 "9"
-        set $ws10 "10: spotify"
+        set $ws10 "10"
         # switch to workspace
         bindsym $mod+1 workspace number $ws1
         bindsym $mod+2 workspace number $ws2
@@ -101,7 +101,11 @@
 	    bindsym Escape mode "default"
 	}
 	bindsym $super+r mode "resize"
-
+	
+	bindsym $mod+Ctrl+Left resize shrink width 100px
+	bindsym $mod+Ctrl+Down resize grow height 100px
+	bindsym $mod+Ctrl+Up resize shrink height 100px
+	bindsym $mod+Ctrl+Right resize grow width 100px
 
 ###### Screenshot directory ######
 ##
@@ -216,11 +220,11 @@ bindsym $alt+Tab exec rofi -show "window" &
 ##
 		exec --no-startup-id dunst & # notification manager
         exec firefox &
-        exec autorandr --change & # for automatic display (profile) detection
+        exec --no-startup-id autorandr --change & # for automatic display (profile) detection
 		exec code &
-		exec nm-applet & # networkmanager
-		exec --no-startup-id compton --config ~/.config/i3/compton.conf # 
-        exec_always feh --bg-scale ~/.wallpaper.jpg
+		exec --no-startup-id nm-applet & # networkmanager
+		exec --no-startup-id compton --config ~/.config/i3/compton.conf & #for transparency of terminal 
+        exec --no-startup-id ( sleep 1 && feh --bg-scale ~/.wallpaper.jpg ) &
 		# exec guake &
 		
 
