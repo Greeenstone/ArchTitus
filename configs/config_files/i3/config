@@ -154,7 +154,7 @@
 ##
 ##
 	# Terminal
-	bindsym $super+Return exec --no-startup-id urxvt &
+	bindsym $super+Return exec --no-startup-id i3-sensible-terminal &
 
 	# File manager
 	bindsym $super+Shift+f exec --no-startup-id xst -e ranger &
@@ -207,7 +207,7 @@
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+asciicircum workspace prev
-bindsym $alt+asciicircum workspace back_and_forth
+bindsym $mod+Escape workspace back_and_forth
 bindsym $alt+Tab exec rofi -show "window" &
 
 
@@ -219,15 +219,16 @@ bindsym $alt+Tab exec rofi -show "window" &
         exec autorandr --change & # for automatic display (profile) detection
 		exec code &
 		exec nm-applet & # networkmanager
+		exec --no-startup-id compton --config ~/.config/i3/compton.conf # 
         exec_always feh --bg-scale ~/.wallpaper.jpg
 		# exec guake &
 		
 
 # autoconfigure apps 
 	# Note: My keyboard has dedicated buttons that it is mapped to alsamixer
-	assign [class="^Firefox$"] 1
+	# assign [class="^Firefox$"] 1
 	# assign [class="^Slack$"] 3
-	assign [class="^Code$"] 2
+	# assign [class="^Code$"] 2
 	# assign [class="^Vlc$"] 9
 	assign [class="^Spotify$"] 10
 	for_window [class="Spotify"] move to workspace $ws10
@@ -235,7 +236,7 @@ bindsym $alt+Tab exec rofi -show "window" &
 
 	# Use Mouse+$mod to drag floating windows to their wanted position
 	for_window [window_role="pop-up"] floating enable
-	for_window [window_role="task_dialog"] floating enable# Key bind for Alsa sound
+	for_window [window_role="task_dialog"] floating enable # Key bind for Alsa sound
 
 
 # clipboard
@@ -259,5 +260,5 @@ bindsym $alt+Tab exec rofi -show "window" &
 	}
 	bindsym $mod+Pause mode "$mode_system" 
 
-
-exec_always ~/.config/i3/autoname_workspaces.py &
+# App Icons   (requires `i3/util.py` file)
+	exec_always ~/.config/i3/autoname_workspaces.py --norenumber_workspaces &

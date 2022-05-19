@@ -45,7 +45,4 @@ sudo pacman -S otf-font-awesome #font
 
 sudo pacman -S papirus-icon-theme
 
-# Terminal
-sudo pacman -S rxvt-unicode
-sudo pacman -S urxvt-perls
-yay -S urxvt-resize-font-git
+

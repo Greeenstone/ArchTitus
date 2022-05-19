@@ -19,7 +19,7 @@ scrot
 ranger
 numlockx
 # terminal
-rxvt-unicode
+terminator
 # themes
 papirus-icon-theme
 arc-gtk-theme
