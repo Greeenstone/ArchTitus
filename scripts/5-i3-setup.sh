@@ -43,6 +43,10 @@ sudo pacman -S otf-font-awesome #font
 
 ~/ArchTitus/link_config.sh
 
-sudo pacman -S papirus-icon-theme
 
+
+# Theming
+sudo pacman -S papirus-icon-theme
+sudo pacman -S lxappearance
+yay -S sweet-gtk-theme
 

@@ -13,6 +13,7 @@ alias installed="pacman -Q | grep "
 
 export PATH="$HOME/bin:$HOME/.local/bin/:$PATH"
 export EDITOR=/bin/nano
+export TERM=terminator
 
 export M="$HOME/Documents/ETH/MASTER_THESIS/"
 export Mc="$HOME/Documents/ETH/MASTER_THESIS/code"

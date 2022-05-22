@@ -30,16 +30,27 @@
         set $ws9 "9"
         set $ws10 "10"
         # switch to workspace
-        bindsym $mod+1 workspace number $ws1
-        bindsym $mod+2 workspace number $ws2
-        bindsym $mod+3 workspace number $ws3
-        bindsym $mod+4 workspace number $ws4
-        bindsym $mod+5 workspace number $ws5
-        bindsym $mod+6 workspace number $ws6
-        bindsym $mod+7 workspace number $ws7
-        bindsym $mod+8 workspace number $ws8
-        bindsym $mod+9 workspace number $ws9
-        bindsym $mod+0 workspace number $ws10
+        # bindsym $mod+1 workspace number $ws1
+        # bindsym $mod+2 workspace number $ws2
+        # bindsym $mod+3 workspace number $ws3
+        # bindsym $mod+4 workspace number $ws4
+        # bindsym $mod+5 workspace number $ws5
+        # bindsym $mod+6 workspace number $ws6
+        # bindsym $mod+7 workspace number $ws7
+        # bindsym $mod+8 workspace number $ws8
+        # bindsym $mod+9 workspace number $ws9
+        # bindsym $mod+0 workspace number $ws10
+		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 ~/.config/rofi/super_menu.sh
+        bindsym $mod+2 exec ~/.config/i3/empty_workspace_launcher.sh 2 ~/.config/rofi/super_menu.sh
+        bindsym $mod+3 exec ~/.config/i3/empty_workspace_launcher.sh 3 ~/.config/rofi/super_menu.sh
+        bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 ~/.config/rofi/super_menu.sh
+        bindsym $mod+5 exec ~/.config/i3/empty_workspace_launcher.sh 5 firefox
+        bindsym $mod+6 exec ~/.config/i3/empty_workspace_launcher.sh 6 ~/.config/rofi/super_menu.sh
+        bindsym $mod+7 exec ~/.config/i3/empty_workspace_launcher.sh 7 ~/.config/rofi/super_menu.sh
+        bindsym $mod+8 exec ~/.config/i3/empty_workspace_launcher.sh 8 ~/.config/rofi/super_menu.sh
+        bindsym $mod+9 exec ~/.config/i3/empty_workspace_launcher.sh 9 ~/.config/rofi/super_menu.sh
+        bindsym $mod+0 exec ~/.config/i3/empty_workspace_launcher.sh 10 ~/.config/rofi/super_menu.sh
+		# bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 firefox
         # move focused container to workspace
         bindsym $mod+Shift+1 move container to workspace number $ws1
         bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -82,7 +93,7 @@
 
 
 	# Resize windows
-	mode "resize" {
+		mode "resize" {
 	    # left will shrink the containers width
 	    # right will grow the containers width
 	    # up will shrink the containers height
@@ -99,8 +110,8 @@
 	    # Return to default mode
 	    bindsym Return mode "default"
 	    bindsym Escape mode "default"
-	}
-	bindsym $super+r mode "resize"
+		}
+		bindsym $super+r mode "resize"
 	
 	bindsym $mod+Ctrl+Left resize shrink width 100px
 	bindsym $mod+Ctrl+Down resize grow height 100px
@@ -221,9 +232,9 @@ bindsym $alt+Tab exec rofi -show "window" &
 		exec --no-startup-id dunst & # notification manager
         exec firefox &
         exec --no-startup-id autorandr --change & # for automatic display (profile) detection
-		exec code &
+		# exec code &
 		exec --no-startup-id nm-applet & # networkmanager
-		exec --no-startup-id compton --config ~/.config/i3/compton.conf & #for transparency of terminal 
+		# exec --no-startup-id compton --config ~/.config/i3/compton.conf & #for transparency of terminal 
         exec --no-startup-id ( sleep 1 && feh --bg-scale ~/.wallpaper.jpg ) &
 		# exec guake &
 		
@@ -255,8 +266,8 @@ bindsym $alt+Tab exec rofi -show "window" &
 	mode "$mode_system" {
 		bindsym l exec --no-startup-id $Locker, mode "default"
 		bindsym e exec --no-startup-id i3-msg exit, mode "default"
-		bindsym Shift+s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-		bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+		# bindsym Shift+s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+		# bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
 		bindsym r exec --no-startup-id systemctl reboot, mode "default"
 		bindsym s exec --no-startup-id systemctl poweroff -i, mode "default" # back to normal: Enter or Escape
 		bindsym Return mode "default"

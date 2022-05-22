@@ -41,7 +41,6 @@
     bluetoothctl pair $bltid
     bluetoothctl trust $bltid
     # bluetoothctl connect $bltid
-    touch .connect_wh910n.sh
     cp ~/ArchTitus/configs/config_files/bluetooth/.connect_wh910n ~/.connect_wh910n.sh
     chmod +x .connect_wh910n.sh
 
