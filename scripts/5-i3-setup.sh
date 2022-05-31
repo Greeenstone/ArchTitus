@@ -50,3 +50,10 @@ sudo pacman -S papirus-icon-theme
 sudo pacman -S lxappearance
 yay -S sweet-gtk-theme
 
+
+####### somehow not working :(
+# # keyring auto-login -- no password
+# ## source: https://bbs.archlinux.org/viewtopic.php?id=117367
+# sudo pacman -S slim 
+# sudo systemctl enable --now slim.service
+# sudo sed -i 's/^#auto_login\s\{3,\}no/auto_login          yes/' /etc/slim.conf

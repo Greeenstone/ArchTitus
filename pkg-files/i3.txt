@@ -20,6 +20,8 @@ ranger
 numlockx
 # terminal
 terminator
+# volumeicon
+pasystray
 # themes
 papirus-icon-theme
 arc-gtk-theme

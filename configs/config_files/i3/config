@@ -40,17 +40,16 @@
         # bindsym $mod+8 workspace number $ws8
         # bindsym $mod+9 workspace number $ws9
         # bindsym $mod+0 workspace number $ws10
-		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 ~/.config/rofi/super_menu.sh
+		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 firefox
         bindsym $mod+2 exec ~/.config/i3/empty_workspace_launcher.sh 2 ~/.config/rofi/super_menu.sh
         bindsym $mod+3 exec ~/.config/i3/empty_workspace_launcher.sh 3 ~/.config/rofi/super_menu.sh
         bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 ~/.config/rofi/super_menu.sh
-        bindsym $mod+5 exec ~/.config/i3/empty_workspace_launcher.sh 5 firefox
+        bindsym $mod+5 exec ~/.config/i3/empty_workspace_launcher.sh 5 ~/.config/rofi/super_menu.sh
         bindsym $mod+6 exec ~/.config/i3/empty_workspace_launcher.sh 6 ~/.config/rofi/super_menu.sh
         bindsym $mod+7 exec ~/.config/i3/empty_workspace_launcher.sh 7 ~/.config/rofi/super_menu.sh
         bindsym $mod+8 exec ~/.config/i3/empty_workspace_launcher.sh 8 ~/.config/rofi/super_menu.sh
         bindsym $mod+9 exec ~/.config/i3/empty_workspace_launcher.sh 9 ~/.config/rofi/super_menu.sh
         bindsym $mod+0 exec ~/.config/i3/empty_workspace_launcher.sh 10 ~/.config/rofi/super_menu.sh
-		# bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 firefox
         # move focused container to workspace
         bindsym $mod+Shift+1 move container to workspace number $ws1
         bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -63,8 +62,14 @@
         bindsym $mod+Shift+9 move container to workspace number $ws9
         bindsym $mod+Shift+0 move container to workspace number $ws10
 		# Move focus to the parent container
-		bindsym $super+a focus parent
-		# bindsym $mod+d focus child
+		bindsym $super+a focus parent  # bindsym $mod+d focus child
+
+		# tab through workspaces
+		bindsym $mod+Tab workspace next
+		bindsym $mod+Shift+Tab workspace prev
+		bindsym $mod+asciicircum exec ~/.config/i3/new_workspace.py
+		bindsym $mod+Escape workspace back_and_forth
+		bindsym $alt+Tab exec rofi -show "window" &
 
 	# Kill focused window
 	bindsym $super+Shift+q kill
@@ -80,7 +85,7 @@
 
 	# Tiling
 		# bindsym $super+s layout stacking
-		# bindsym $super+w layout tabbed
+		bindsym $super+t layout tabbed
 		bindsym $super+e layout toggle split
 		bindsym $super+h splith
 		bindsym $super+v splitv
@@ -179,6 +184,8 @@
 	bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/scripts/notify/light_up.sh && pkill -RTMIN+20 i3blocks
 	
 	# Audio
+	exec --no-startup-id pamixer --set-volume 40 -m # this mutes sound on startup and sets sound to 40
+	exec --no-startup-id pasystray & # volumeicon
 	bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/scripts/notify/volume_plus.sh && pkill -RTMIN+30 i3blocks
 	bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/scripts/notify/volume_minus.sh && pkill -RTMIN+30 i3blocks
 	bindsym XF86AudioMute exec --no-startup-id ~/.config/scripts/notify/volume_mute.sh && pkill -RTMIN+30 i3blocks
@@ -192,7 +199,6 @@
 	bindsym XF86AudioPlay exec playerctl play-pause
 	bindsym XF86AudioNext exec playerctl next
 	bindsym XF86AudioPrev exec playerctl previous
-	
 
 	# Screenshot
 	bindsym Print exec --no-startup-id ~/.config/scripts/screenshot/i3_screen.sh &
@@ -218,19 +224,13 @@
 	exec --no-startup-id $HOME/.config/scripts/actions/configureXorgTouchpad.sh &
 
 
-# tab through workspaces
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-bindsym $mod+asciicircum workspace prev
-bindsym $mod+Escape workspace back_and_forth
-bindsym $alt+Tab exec rofi -show "window" &
-
 
 ###### AUTOSTART APPLICATIONS ######
 ##
 ##
 		exec --no-startup-id dunst & # notification manager
-        exec firefox &
+        # exec firefox &
+		exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox' &
         exec --no-startup-id autorandr --change & # for automatic display (profile) detection
 		# exec code &
 		exec --no-startup-id nm-applet & # networkmanager
