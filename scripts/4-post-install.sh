@@ -33,6 +33,8 @@
 # fix touchpad
     sudo cp ~/ArchTitus/configs/etc/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics.conf
 
+# fix ETH-vpn issues  (disable ipv6)
+    sudo cp ~/ArchTitus/configs/etc/sysctl.d/40-ipv6.conf /etc/sysctl.d/40-ipv6.conf
 
 # bluetooth
     rfkill unblock all #unblock bluetooth is soft-blocked

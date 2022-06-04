@@ -40,7 +40,7 @@
         # bindsym $mod+8 workspace number $ws8
         # bindsym $mod+9 workspace number $ws9
         # bindsym $mod+0 workspace number $ws10
-		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 firefox
+		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 ~/.config/rofi/super_menu.sh
         bindsym $mod+2 exec ~/.config/i3/empty_workspace_launcher.sh 2 ~/.config/rofi/super_menu.sh
         bindsym $mod+3 exec ~/.config/i3/empty_workspace_launcher.sh 3 ~/.config/rofi/super_menu.sh
         bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 ~/.config/rofi/super_menu.sh
@@ -244,6 +244,7 @@
 	# assign [class="^Firefox$"] 1
 	# assign [class="^Slack$"] 3
 	# assign [class="^Code$"] 2
+	for_window [class = "^Code"] layout tabbed
 	# assign [class="^Vlc$"] 9
 	assign [class="^Spotify$"] 10
 	for_window [class="Spotify"] move to workspace $ws10

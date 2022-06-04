@@ -11,13 +11,23 @@ from util import *
 # Finds the smallest workspace number such that it will open to the right of the
 # existing workspaces on the current monitor. For example if the current monitor
 # has workspace numbers [1,3,4], this function will return 5.
-def find_next_ws_num_on_monitor(i3):
+def find_next_ws_num_on_monitor(i3, Lukas_adaptation=True):
+    """
+    Lukas_adaptation:
+    returns the smallest workspace which is not occupied yet
+    (ignores '1' since it is reserved for firefox)
+    """
     focused_monitor = focused_workspace(i3).output
     logging.info("focused monitor: %s" % focused_monitor)
 
     ws_on_monitor = filter(lambda ws: ws.output == focused_monitor, i3.get_workspaces())
     nums = [ws.num for ws in ws_on_monitor]
-    maxnum = max(nums)
+    if Lukas_adaptation:
+        for i in range(2, 100):
+            if i not in nums:
+                return i
+    else:
+        maxnum = max(nums)
     logging.info("max workspace on monitor: %s" % str(maxnum))
 
     return maxnum + 1
