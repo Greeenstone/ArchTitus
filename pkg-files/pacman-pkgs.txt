@@ -95,3 +95,6 @@ texlive-latexextra
 texlive-science
 libreoffice-still
 jre-openjdk
+# color picker to clipboard --
+xcolor
+xclip

@@ -43,3 +43,5 @@
     # setup cron-job
     # ...
 
+# remove log-files
+    rm -f 0-preinstall.log  1-setup.log  2-user.log  3-post-setup.log  startup.log

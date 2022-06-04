@@ -136,13 +136,22 @@
 	font pango:Iosevka Extended Bold 10
 
 
-
-	# default_border pixel 2
 	title_align center
 	focus_follows_mouse false
-	default_border pixel 2
-	# default_floating_border pixel 1
 
+	# Borders
+		default_floating_border pixel 1
+		default_border pixel 1
+		hide_edge_borders smart # no borders if only one window on workspace
+
+	# Colors
+		# class                 border  bground text    indicator child_border
+		client.focused          #C50ED2 #000000 #FFFFFF #C50ED2   #EF11FF
+		client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+		client.unfocused        #222222 #000000 #888888 #292D2E   #222222
+		client.urgent           #C50ED2 #EF11FF #FFFFFF #EF11FF   #EF11FF
+		client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+		client.background       #FFFFFF
 
 ###### Load Xresources file ######
 ##
@@ -155,6 +164,7 @@
 ###### STATUSBAR ######
 ##
 ##
+
 	bar {
 	    # position top
 	    # font pango:Iosevka Extended Bold 10
@@ -165,7 +175,23 @@
 	    # The default just shows the current date and time.
 	    status_command i3blocks
 
+		colors {
+			background #000000
+			statusline #FFFFFF
+			separator  #666666
+
+			focused_workspace  #C50ED2 #C50ED2 #FFFFFF
+			active_workspace   #333333 #222222 #FFFFFF
+			inactive_workspace #333333 #222222 #888888
+			urgent_workspace   #FF435E #FF435E #FFFFFF
+			binding_mode       #FF435E #FF435E #FFFFFF
+		}
 	}
+
+	# hide/unhide i3status bar
+	bindsym $mod+m bar mode toggle
+
+
 
 
 
@@ -208,7 +234,8 @@
 	# Launcher
 	
 	bindsym --release Super_L exec --no-startup-id ~/.config/rofi/super_menu.sh &
-	bindsym $mod+d exec "rofi -modi drun,run -show drun"
+	bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#EF11FF' -sf '#000000' -fn 'monospace-16' -p 'run: '"
+	# bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 	# Scan Wifi
 	# bindsym $super+Shift+w exec --no-startup-id nmcli device wifi rescan &
@@ -256,10 +283,12 @@
 
 
 # clipboard
-        bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-        bindsym $mod+Shift+c exec greenclip clear
-        exec greenclip daemon # clipboard manager
+    bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+    bindsym $mod+Shift+c exec greenclip clear
+    exec greenclip daemon # clipboard manager
 
+	# color-picker
+	bindsym --release $mod+Shift+p exec xcolor | xclip -selection clipboard
 
  
 # Restart or shutdown or suspend by using WinKey+Pause key with meny to select option

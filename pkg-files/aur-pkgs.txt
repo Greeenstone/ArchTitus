@@ -13,3 +13,7 @@ superproductivity-bin
  visual-studio-code-bin
 zotero-bin
 zoom
+# theming ------
+candy-icons-git
+sweet-cursor-theme-git
+sweet-folders-icons-git
