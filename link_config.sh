@@ -7,7 +7,7 @@
     backup_dir="$HOME/.config/conf_backups/backup_$timestamp"
     mkdir -p $backup_dir
 
-    for dir in dunst i3 i3blocks rofi scripts sound bluetooth terminator; do
+    for dir in dunst i3 i3blocks rofi scripts sound bluetooth terminator nano picom.conf; do
     echo "removing and linking the director: $HOME/.config/$dir"
     cp -r $HOME/.config/${dir} $backup_dir
     rm -r $HOME/.config/${dir}

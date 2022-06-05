@@ -98,3 +98,4 @@ jre-openjdk
 # color picker to clipboard --
 xcolor
 xclip
+nano-syntax-highlighting

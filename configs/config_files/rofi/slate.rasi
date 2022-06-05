@@ -1,7 +1,7 @@
 * {
   background-color: @bg;
   border-color: #2e343f;
-  text-color: #8ca0aa;
+  text-color: @fg;
   spacing: 0;
   width: 1000px;
   font: "JetBrains Mono 14";
@@ -50,7 +50,7 @@ element selected.active {
 
 element selected.normal {
     background-color: @selected-bg;
-  
+    text-color: @selected-fg;
 }
 
 element-icon { 

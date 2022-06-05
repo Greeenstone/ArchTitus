@@ -10,14 +10,22 @@
 	# Navigation
 		# Move your focus around
 		bindsym $super+Left focus left
+		bindsym $super+h focus left
 		bindsym $super+Down focus down
+		bindsym $super+j focus down
 		bindsym $super+Up focus up
+		bindsym $super+k focus up
 		bindsym $super+Right focus right
+		bindsym $super+l focus right
 		# Move the focused window with the same, but add Shift
 		bindsym $super+Shift+Left move left
+		bindsym $super+Shift+h move left
 		bindsym $super+Shift+Down move down
+		bindsym $super+Shift+j move down
 		bindsym $super+Shift+Up move up
+		bindsym $super+Shift+k move up
 		bindsym $super+Shift+Right move right
+		bindsym $super+Shift+l move right
 		# set workspace names & variables
         set $ws1 "1"
         set $ws2 "2"
@@ -40,16 +48,16 @@
         # bindsym $mod+8 workspace number $ws8
         # bindsym $mod+9 workspace number $ws9
         # bindsym $mod+0 workspace number $ws10
-		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 ~/.config/rofi/super_menu.sh
-        bindsym $mod+2 exec ~/.config/i3/empty_workspace_launcher.sh 2 ~/.config/rofi/super_menu.sh
-        bindsym $mod+3 exec ~/.config/i3/empty_workspace_launcher.sh 3 ~/.config/rofi/super_menu.sh
-        bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 ~/.config/rofi/super_menu.sh
-        bindsym $mod+5 exec ~/.config/i3/empty_workspace_launcher.sh 5 ~/.config/rofi/super_menu.sh
-        bindsym $mod+6 exec ~/.config/i3/empty_workspace_launcher.sh 6 ~/.config/rofi/super_menu.sh
-        bindsym $mod+7 exec ~/.config/i3/empty_workspace_launcher.sh 7 ~/.config/rofi/super_menu.sh
-        bindsym $mod+8 exec ~/.config/i3/empty_workspace_launcher.sh 8 ~/.config/rofi/super_menu.sh
-        bindsym $mod+9 exec ~/.config/i3/empty_workspace_launcher.sh 9 ~/.config/rofi/super_menu.sh
-        bindsym $mod+0 exec ~/.config/i3/empty_workspace_launcher.sh 10 ~/.config/rofi/super_menu.sh
+		bindsym $mod+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+2 exec ~/.config/i3/empty_workspace_launcher.sh 2 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+3 exec ~/.config/i3/empty_workspace_launcher.sh 3 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+4 exec ~/.config/i3/empty_workspace_launcher.sh 4 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+5 exec ~/.config/i3/empty_workspace_launcher.sh 5 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+6 exec ~/.config/i3/empty_workspace_launcher.sh 6 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+7 exec ~/.config/i3/empty_workspace_launcher.sh 7 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+8 exec ~/.config/i3/empty_workspace_launcher.sh 8 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+9 exec ~/.config/i3/empty_workspace_launcher.sh 9 ~/.config/rofi/super_menu.sh &
+        bindsym $mod+0 exec ~/.config/i3/empty_workspace_launcher.sh 10 ~/.config/rofi/super_menu.sh &
         # move focused container to workspace
         bindsym $mod+Shift+1 move container to workspace number $ws1
         bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -62,7 +70,8 @@
         bindsym $mod+Shift+9 move container to workspace number $ws9
         bindsym $mod+Shift+0 move container to workspace number $ws10
 		# Move focus to the parent container
-		bindsym $super+a focus parent  # bindsym $mod+d focus child
+		# bindsym $mod+d focus child
+		bindsym $super+a focus parent  
 
 		# tab through workspaces
 		bindsym $mod+Tab workspace next
@@ -87,8 +96,8 @@
 		# bindsym $super+s layout stacking
 		bindsym $super+t layout tabbed
 		bindsym $super+e layout toggle split
-		bindsym $super+h splith
-		bindsym $super+v splitv
+		bindsym $super+z splith
+		bindsym $super+u splitv
 		bindsym $super+f fullscreen
 
 	# Floating
@@ -97,31 +106,15 @@
 		bindsym $super+space focus mode_toggle
 
 
-	# Resize windows
-		mode "resize" {
-	    # left will shrink the containers width
-	    # right will grow the containers width
-	    # up will shrink the containers height
-	    # down will grow the containers height
-	    bindsym Left resize shrink width 250px
-		bindsym Shift+Left resize shrink width 10px
-	    bindsym Down resize grow height 250px
-		bindsym Shift+Down resize grow height 10px
-	    bindsym Up resize shrink height 250px
-		bindsym Shift+Up resize shrink height 10px
-	    bindsym Right resize grow width 250px
-		bindsym Shift+Right resize grow width 10px
-
-	    # Return to default mode
-	    bindsym Return mode "default"
-	    bindsym Escape mode "default"
-		}
-		bindsym $super+r mode "resize"
-	
-	bindsym $mod+Ctrl+Left resize shrink width 100px
-	bindsym $mod+Ctrl+Down resize grow height 100px
-	bindsym $mod+Ctrl+Up resize shrink height 100px
-	bindsym $mod+Ctrl+Right resize grow width 100px
+	# Resize windows	
+		bindsym $mod+Ctrl+Left resize shrink width 100px
+		bindsym $mod+Ctrl+h resize shrink width 100px
+		bindsym $mod+Ctrl+Down resize grow height 100px
+		bindsym $mod+Ctrl+j resize grow height 100px
+		bindsym $mod+Ctrl+Up resize shrink height 100px
+		bindsym $mod+Ctrl+k resize shrink height 100px
+		bindsym $mod+Ctrl+Right resize grow width 100px
+		bindsym $mod+Ctrl+l resize grow width 100px
 
 ###### Screenshot directory ######
 ##
@@ -181,8 +174,8 @@
 			separator  #666666
 
 			focused_workspace  #C50ED2 #C50ED2 #FFFFFF
-			active_workspace   #333333 #222222 #FFFFFF
-			inactive_workspace #333333 #222222 #888888
+			active_workspace   #C50ED2 #222222 #FFFFFF
+			inactive_workspace #888888 #111111 #DDDDDD
 			urgent_workspace   #FF435E #FF435E #FFFFFF
 			binding_mode       #FF435E #FF435E #FFFFFF
 		}
@@ -232,7 +225,7 @@
 	bindsym Shift+Print exec --no-startup-id ~/.config/scripts/screenshot/i3_region.sh &
 	
 	# Launcher
-	
+	# exec --no-startup-id albert &
 	bindsym --release Super_L exec --no-startup-id ~/.config/rofi/super_menu.sh &
 	bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#EF11FF' -sf '#000000' -fn 'monospace-16' -p 'run: '"
 	# bindsym $mod+d exec "rofi -modi drun,run -show drun"
@@ -240,8 +233,8 @@
 	# Scan Wifi
 	# bindsym $super+Shift+w exec --no-startup-id nmcli device wifi rescan &
 	
-	# Screen lock
-	bindsym $super+l exec --no-startup-id ~/.config/scripts/actions/i3lock.sh &
+	# Screen (b)lock
+	bindsym $super+b exec --no-startup-id ~/.config/scripts/actions/i3lock.sh &
 	# bindsym $super+Shift+l exec --no-startup-id ~/.config/scripts/actions/i3lock_sleep.sh &  # sleep&hibernation not working on my pc
 
 
@@ -261,8 +254,8 @@
         exec --no-startup-id autorandr --change & # for automatic display (profile) detection
 		# exec code &
 		exec --no-startup-id nm-applet & # networkmanager
-		# exec --no-startup-id compton --config ~/.config/i3/compton.conf & #for transparency of terminal 
-        exec --no-startup-id ( sleep 1 && feh --bg-scale ~/.wallpaper.jpg ) &
+        exec --no-startup-id picom -CGb
+		exec --no-startup-id ( sleep 1 && feh --bg-scale ~/.wallpaper.jpg ) &
 		# exec guake &
 		
 

@@ -15,5 +15,6 @@ zotero-bin
 zoom
 # theming ------
 candy-icons-git
-sweet-cursor-theme-git
 sweet-folders-icons-git
+# for dmenu with shell-aliases
+dmenu-recent-aliases-git
