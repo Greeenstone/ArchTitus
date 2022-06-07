@@ -99,3 +99,4 @@ jre-openjdk
 xcolor
 xclip
 nano-syntax-highlighting
+progress

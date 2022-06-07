@@ -1,3 +1,5 @@
+# bumblebee-status
+    yay -S bumblebee-status
 
 ### PulseAudio applet --small icon in the systray
    yay -S pa-applet-git

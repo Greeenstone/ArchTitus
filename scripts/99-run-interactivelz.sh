@@ -45,3 +45,15 @@
 
 # remove log-files
     rm -f 0-preinstall.log  1-setup.log  2-user.log  3-post-setup.log  startup.log
+
+# create swapfile (run line by line)
+    sudo su
+    cd /
+    truncate -s 0 ./swapfile
+    chattr +C ./swapfile
+    dd if=/dev/zero of=/swapfile bs=1M count=10240 status=progress
+    chmod 0600 /swapfile
+    mkswap -U clear /swapfile
+    swapon /swapfile
+    echo "/swapfile none swap defaults 0 0" >> /etc/fstab
+    exit

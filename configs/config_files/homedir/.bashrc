@@ -3,7 +3,7 @@
 
 export PS1="\[\033[38;5;11m\]\t\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;11m\][\[$(tput sgr0)\]\w\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;11m\]]\n\\$\[$(tput sgr0)\] "
 
-alias ls='ls -G --color=auto --group-directories-first -v'
+alias ls='ls -Gh --color=auto --group-directories-first'
 alias r="radian"
 alias installed="pacman -Q | grep "
 alias install="sudo pacman -S"

@@ -15,9 +15,6 @@
     echo "options snd-hda-intel model=laptop-amic enable=yes" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
     echo "options snd-hda-intel power_save=0" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
 
-# make caps a 3rd lvl modifier
-    setxkbmap -option "lv3:caps_switch"
-
 ### Improve laptop battery consumption
    sudo pacman -S tlp tlp-rdw powertop acpi
    sudo systemctl enable tlp

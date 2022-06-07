@@ -157,29 +157,59 @@
 ###### STATUSBAR ######
 ##
 ##
-
 	bar {
-	    # position top
+	    position top
 	    # font pango:Iosevka Extended Bold 10
+		font pango:Inconsolata 12
 	    # tray_output none
 	    # height 28
 
 	    # When the status_command prints a new line to stdout, swaybar updates.
 	    # The default just shows the current date and time.
-	    status_command i3blocks
+		status_command /usr/share/bumblebee-status/bumblebee-status -m \
+		progress \
+		spotify \
+		disk:root \
+		cpu \
+		memory \
+		pasink \
+		thunderbird \
+		date \
+		time \
+		battery \
+		-p root.path=/ time.format="%H:%M" date.format="%a, %d %b %Y" \
+		cpu.warning=70 cpu.critical=90 cpu.format="{:.1f}" disk.format="{left}" \
+		disk.warning=85 disk.critical=95 memory.warning=85 memory.critical:95 \
+		memory.format="{percent:.01f}%" \
+		battery.warning=70 battery.critical=20 battery.showpowerconsumption="false" \
+		spotify.format="{title}" traffic.showname="False" traffic.format="{:.1f}" \
+		traffic.graphlen=8 progress.placeholder="" thunderbird.home=~/.thunderbird \
+		thunderbird.inboxes=mail.ethz.ch/INBOX.msf,imap.gmail.com/INBOX.msf  \
+		-t night-powerline \
+		--autohide battery
+		# network_traffic \
+		# brightness \
+		# traffic \
+		## thunderbird list mailboxes command:>>  find ~/.thunderbird -name '*.msf' | awk -F '/' '{print $(NF-1)"/"$(NF)}'
+
+
 
 		colors {
 			background #000000
 			statusline #FFFFFF
 			separator  #666666
-
-			focused_workspace  #C50ED2 #C50ED2 #FFFFFF
+			# 07d7c1 nice green
+			# focused_workspace  #C50ED2 #C50ED2 #FFFFFF
+			focused_workspace  #C50ED2 #111111 #C50ED2
 			active_workspace   #C50ED2 #222222 #FFFFFF
-			inactive_workspace #888888 #111111 #DDDDDD
+			inactive_workspace #7d7c13 #111111 #DDDDDD
 			urgent_workspace   #FF435E #FF435E #FFFFFF
 			binding_mode       #FF435E #FF435E #FFFFFF
 		}
 	}
+
+# pip install psutil  # python -cpu warning
+# pacman -S progress
 
 	# hide/unhide i3status bar
 	bindsym $mod+m bar mode toggle
@@ -264,7 +294,7 @@
 	# assign [class="^Firefox$"] 1
 	# assign [class="^Slack$"] 3
 	# assign [class="^Code$"] 2
-	for_window [class = "^Code"] layout tabbed
+	# for_window [class = "^Code"] layout tabbed
 	# assign [class="^Vlc$"] 9
 	assign [class="^Spotify$"] 10
 	for_window [class="Spotify"] move to workspace $ws10
