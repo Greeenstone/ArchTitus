@@ -2,6 +2,7 @@
 #
 # github.com/justbuchanan/i3scripts
 
+import os
 import i3ipc
 import argparse
 import logging
@@ -43,6 +44,9 @@ def new_workspace(move_focused=False):
         )
     else:
         i3.command("workspace %d" % new_ws_num)
+        os.system(
+            "~/.config/i3/super_menu.sh"
+        )  # added by lukas --> opens launcher if empty workspace
 
 
 if __name__ == "__main__":

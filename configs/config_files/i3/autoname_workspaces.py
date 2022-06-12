@@ -152,6 +152,8 @@ WINDOW_ICONS = {
     # "zoom": fa.icons["comment"],
     "zoom": fa.icons["video"],
     "zoom ": fa.icons["video"],
+    "Zoom - Licensed Account": fa.icons["video"],
+    "Zoom Meeting": fa.icons["video"],
     "zotero": fa.icons["file-pdf"],
 }
 
@@ -178,6 +180,13 @@ def icon_for_window(window):
             cls = cls.lower()  # case-insensitive matching
             if cls in WINDOW_ICONS:
                 return WINDOW_ICONS[cls]
+    wm_name = xprop(window.window, "WM_NAME")
+    if wm_name != None and len(wm_name) > 0:
+        for names in wm_name:
+            names = names.lower()  # case-insensitive matching
+            for name in names.split(" "):
+                if name in WINDOW_ICONS:
+                    return WINDOW_ICONS[name]
     logging.info("No icon available for window with classes: %s" % str(classes))
     return DEFAULT_ICON
 

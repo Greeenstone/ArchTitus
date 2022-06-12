@@ -11,6 +11,6 @@ alias uninstall="sudo pacman -Rns"
 alias remove="sudo pacman -Rns"
 
 export PATH=~/.npm-global/bin:$PATH
-
+export MASTER_THESIS_DIR_LGRAZ=/home/lukas/Documents/ETH/MASTER_THESIS
 
 

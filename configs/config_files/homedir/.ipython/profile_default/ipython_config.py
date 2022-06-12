@@ -1,1 +1,1 @@
-c.InteractiveShell.colors = 'NoColor'
+# c.InteractiveShell.colors = 'NoColor'
