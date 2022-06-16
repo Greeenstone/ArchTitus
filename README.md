@@ -25,3 +25,9 @@ my dotfiles are in configs/config_files/*
 note that `configs/config_files/homedir` contains the files that are to be linked into `~/`.  
 initialize by running: `/.link_config.sh`
 
+## Screenshots
+![](pictures/20220617000716_SCREEN.png)
+
+![](pictures/20220617000924_SCREEN.png)
+
+![](pictures/20220617001012_SCREEN.png)
