@@ -5,5 +5,6 @@ local({
   options(repos = r)
 })
 
-
+# help page in terminal
+options(help_type = "text")
 options(digits=5)

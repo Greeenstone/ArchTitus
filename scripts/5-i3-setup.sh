@@ -59,3 +59,12 @@ yay -S sweet-gtk-theme
 # sudo pacman -S slim 
 # sudo systemctl enable --now slim.service
 # sudo sed -i 's/^#auto_login\s\{3,\}no/auto_login          yes/' /etc/slim.conf
+
+
+# backlight (acer screenbrightnes)
+    # allow user to change brightness with the command:
+    #    echo 5 > /sys/class/backlight/acpi_video0/brightness
+    sudo usermod -a -G video lukas
+    sudo cp $HOME/ArchTitus/config/etc/udev/rules.d/backlight.rules /etc/udev/rules.d/backlight.rules
+    # replacement for xbacklight
+    sudo pacman -S acpilight 

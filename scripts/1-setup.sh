@@ -122,11 +122,11 @@ elif grep -E "AuthenticAMD" <<< ${proc_type}; then
     proc_ucode=amd-ucode.img
 fi
 
-# echo -ne "
-# -------------------------------------------------------------------------
-#                     Installing Graphics Drivers
-# -------------------------------------------------------------------------
-# "
+# # echo -ne "
+# # -------------------------------------------------------------------------
+# #                     Installing Graphics Drivers
+# # -------------------------------------------------------------------------
+# # "
 # # Graphics Drivers find and install
 # gpu_type=$(lspci)
 # if grep -E "NVIDIA|GeForce" <<< ${gpu_type}; then
