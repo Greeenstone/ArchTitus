@@ -68,3 +68,7 @@ yay -S sweet-gtk-theme
     sudo cp $HOME/ArchTitus/config/etc/udev/rules.d/backlight.rules /etc/udev/rules.d/backlight.rules
     # replacement for xbacklight
     sudo pacman -S acpilight 
+
+
+# redshift (night light)
+    sudo pacman -S redshift
