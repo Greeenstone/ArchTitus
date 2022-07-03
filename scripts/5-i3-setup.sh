@@ -85,10 +85,15 @@ yay -S sweet-gtk-theme
     xdg-mime default visual-studio-code.desktop inode/directory
 
 # file explorer
+    # ranger
     install ranger
     install w3m  #image preview
     
+    # lf
     yay -S lf
     install alacritty
     install ueberzug
-    
+    # dependencies for viewr:
+        for i in ("ueberzug" "lynx" "bat" "atool" "mediainfo" "ffmpegthumbnailer" "odt2txt"); do
+            install $i
+        done
