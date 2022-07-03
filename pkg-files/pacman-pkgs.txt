@@ -64,21 +64,19 @@ firefox
 netctl
 rclone
 #### FONTS --------
-noto-fonts
-ttf-font-awesome
-ttf-ubuntu-font-family
 ttf-dejavu
-ttf-freefont
 ttf-liberation
-ttf-droid
-ttf-roboto
 terminus-font
 --END OF MINIMAL INSTALL--
 obs-studio
-# okular
 qgis
 translate-shell
+# scanning - OCR - GUI
 sane
+tesseract
+tesseract-data-deu
+tesseract-data-deu_frak
+tesseract-data-eng
 gscan2pdf
 # TEXLIVE-MOST-------
 texlive-bibtexextra

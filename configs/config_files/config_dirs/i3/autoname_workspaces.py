@@ -54,6 +54,7 @@ from util import *
 # then click on the application you want to inspect.
 WINDOW_ICONS = {
     "alacritty": fa.icons["terminal"],
+    "albert": "_",
     "arandr": fa.icons["desktop"],
     "atom": fa.icons["code"],
     "banshee": fa.icons["play"],
@@ -139,8 +140,8 @@ WINDOW_ICONS = {
     "telegram": fa.icons["telegram"],
     "terminator": fa.icons["terminal"],
     "thunar": fa.icons["copy"],
-    "thunderbird": fa.icons["envelope-open-text"],
-    # "thunderbird": fa.icons["envelope"],
+    # "thunderbird": fa.icons["envelope-open-text"],
+    "thunderbird": fa.icons["envelope"],
     "totem": fa.icons["play"],
     "urxvt": fa.icons["terminal"],
     "vcastqt": fa.icons["chevron-right"],

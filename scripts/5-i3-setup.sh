@@ -72,3 +72,23 @@ yay -S sweet-gtk-theme
 
 # redshift (night light)
     sudo pacman -S redshift
+
+# alternating layout
+    git clone https://github.com/olemartinorg/i3-alternating-layout.git temp_github_dir
+    mv temp_github_dir/alternating_layouts.py ~/ArchTitus/configs/config_files/config_dirs/i3/ 
+    rm -rf temp_github_dir/ # remove repository
+    chmod +x ~/ArchTitus/configs/config_files/config_dirs/i3/alternating_layouts.py 
+
+# albert
+    yay -S albert.bin
+    # let albert open with vs-code
+    xdg-mime default visual-studio-code.desktop inode/directory
+
+# file explorer
+    install ranger
+    install w3m  #image preview
+    
+    yay -S lf
+    install alacritty
+    install ueberzug
+    

@@ -11,7 +11,5 @@ setxkbmap -option lv3:win_switch
 # setxkbmap -option lv3:lwin_switch
 # setxkbmap -option lv3:rwin_switch
 
-# for albert to accept icons
-export QT_QPA_PLATFORMTHEME=qt5ct
-
-export MASTER_THESIS_DIR_LGRAZ=/home/lukas/Documents/ETH/MASTER_THESIS
+source ~/.env_vars
+source ~/.aliases

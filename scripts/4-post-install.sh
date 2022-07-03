@@ -54,3 +54,24 @@
 # keyboard layout
     localectl set-x11-keymap de acer_laptop nodeadkeys
     sudo localectl set-x11-keymap de acer_laptop nodeadkeys
+
+
+# ZSH config
+    sudo pacman -S zsh zsh-completions thefuck fzf
+    # packages
+        # autosuggestions
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+            # add to zshrc: "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+        # powerlevel 10
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+            # echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+        
+        # syntax highlighting
+        sudo pacman -S zsh-syntax-highlighting
+        # add to *end* of zshrc: "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 
+
+
+# enable cronie
+    sudo systemctl enable --now cronie.service
+

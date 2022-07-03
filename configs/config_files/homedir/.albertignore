@@ -1,0 +1,11 @@
+# Alber ignore file
+
+# Ignore git projects
+/git/*
+
+# Include albert repos though
+!/git/albert
+!/git/aur-albert
+
+
+/R/*

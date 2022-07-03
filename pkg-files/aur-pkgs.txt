@@ -18,3 +18,7 @@ candy-icons-git
 sweet-folders-icons-git
 # for dmenu with shell-aliases
 dmenu-recent-aliases-git
+# to supress GTK3 decoration (resotres borders for nautilus in i3)
+gtk3-nocsd-git
+# fonts
+nerd-fonts-complete
