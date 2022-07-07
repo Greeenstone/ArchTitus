@@ -25,9 +25,6 @@
 
 
 
-# # i3blocks config
-# cp /etc/i3blocks.conf .config/i3/
-
 # clipboard manager
     yay -S rofi-greenclip
     # greenclip daemon
@@ -84,6 +81,23 @@ yay -S sweet-gtk-theme
     # let albert open with vs-code
     xdg-mime default visual-studio-code.desktop inode/directory
 
+    xdg-mime default pinta.desktop image/svg+xml=pinta.desktop
+    xdg-mime default pinta.desktop image/bmp=pinta.desktop
+    xdg-mime default pinta.desktop image/openraster=pinta.desktop
+    xdg-mime default pinta.desktop image/x-tga=pinta.desktop
+    xdg-mime default pinta.desktop image/tiff=pinta.desktop
+    xdg-mime default pinta.desktop image/vnd.zbrush.pcx=pinta.desktop
+    xdg-mime default pinta.desktop image/x-portable-graymap=pinta.desktop
+    xdg-mime default pinta.desktop image/png=pinta.desktop
+    xdg-mime default pinta.desktop image/x-xpixmap=pinta.desktop
+    xdg-mime default pinta.desktop image/x-portable-pixmap=pinta.desktop
+    xdg-mime default pinta.desktop image/x-portable-anymap=pinta.desktop
+    xdg-mime default pinta.desktop image/vnd.microsoft.icon=pinta.desktop
+    xdg-mime default pinta.desktop image/jpeg=pinta.desktop
+    xdg-mime default pinta.desktop image/gif=pinta.desktop
+    xdg-mime default pinta.desktop image/x-portable-bitmap=pinta.desktop
+    xdg-mime default pinta.desktop image/x-xbitmap=pinta.desktop
+
 # file explorer
     # ranger
     install ranger
@@ -91,9 +105,22 @@ yay -S sweet-gtk-theme
     
     # lf
     yay -S lf
-    install alacritty
     install ueberzug
+    mkdir -p ~/.trash
+    perl-file-mimeinfo
     # dependencies for viewr:
         for i in ("ueberzug" "lynx" "bat" "atool" "mediainfo" "ffmpegthumbnailer" "odt2txt"); do
             install $i
         done
+    # automount 
+        install ldm #aur
+        sudo touch /etc/ldm.conf
+        echo "MOUNT_OWNER=$USER" | sudo tee -a /etc/ldm.conf
+        echo "BASE_MOUNTPOINT=/mnt" | sudo tee -a /etc/ldm.conf
+        sudo mkdir /mnt 
+    # rofi-mount : https://github.com/carvalhudo/usb-rofi
+
+
+# disk guis (from gnome)
+    install baobab
+    install gnome-disk-utility

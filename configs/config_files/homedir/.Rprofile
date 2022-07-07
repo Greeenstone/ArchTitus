@@ -8,3 +8,4 @@ local({
 # help page in terminal
 options(help_type = "text")
 options(digits=5)
+options(max.print=2000)
