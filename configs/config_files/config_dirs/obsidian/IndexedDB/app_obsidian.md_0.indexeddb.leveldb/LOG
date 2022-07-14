@@ -1,3 +1,3 @@
-2022/07/06-10:35:12.143 1819 Reusing MANIFEST /home/lukas/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2022/07/06-10:35:12.143 1819 Recovering log #4
-2022/07/06-10:35:12.147 1819 Reusing old log /home/lukas/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000004.log 
+2022/07/14-14:52:25.245 19fad Reusing MANIFEST /home/lukas/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/14-14:52:25.246 19fad Recovering log #4
+2022/07/14-14:52:25.345 19fad Reusing old log /home/lukas/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000004.log 

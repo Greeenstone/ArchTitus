@@ -16,9 +16,10 @@
     echo "options snd-hda-intel power_save=0" | sudo tee -a /etc/modprobe.d/sound.conf > /dev/null
 
 ### Improve laptop battery consumption
-   sudo pacman -S tlp tlp-rdw powertop acpi
+   sudo pacman -S tlp tlp-rdw 
+#    sudo pacman -S powertop acpi
    sudo systemctl enable tlp
-   sudo systemctl enable tlp-sleep
+#    sudo systemctl enable tlp-sleep
    sudo systemctl mask systemd-rfkill.service
    sudo systemctl mask systemd-rfkill.socket
     # If your laptop is a ThinkPad, also run this:
@@ -55,6 +56,8 @@
     localectl set-x11-keymap de acer_laptop nodeadkeys
     sudo localectl set-x11-keymap de acer_laptop nodeadkeys
 
+# Acer - disable sleep
+    sudo ln -s ~/ArchTitus/configs/etc/systemd/sleep.conf /etc/systemd
 
 # ZSH config
     sudo pacman -S zsh zsh-completions thefuck fzf

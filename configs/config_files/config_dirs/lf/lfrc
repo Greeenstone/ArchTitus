@@ -130,8 +130,8 @@ cmd trash ${{
 #     zip -r $1.zip $1
 #     rm -rf $1
 # }}
-cmd zip %echo "Archive Name: " ; read name ; zip -r "${name}" "$f"
-cmd tar %echo "Archive Name: " ; read name ; tar cvf "${name}.tar" "$f"
+cmd zip %echo "Archive Name: " ; read name ; zip -r "${name}" "$fs"
+cmd tar %echo "Archive Name: " ; read name ; tar cvf "${name}.tar" "$fs"
 
 ##################################
 ### Bindings
@@ -159,6 +159,8 @@ map i
 map [
 map ]
 map m
+map O
+map o
 
 map O $mimeopen --ask $f
 map o $mimeopen --ask $f

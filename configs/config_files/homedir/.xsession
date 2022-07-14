@@ -7,8 +7,8 @@ xset r rate 250 45
 
 setxkbmap -option
 setxkbmap -option caps:hyper
-setxkbmap -option lv3:win_switch
-# setxkbmap -option lv3:lwin_switch
+# setxkbmap -option lv3:win_switch
+setxkbmap -option lv3:lwin_switch
 # setxkbmap -option lv3:rwin_switch
 
 source ~/.env_vars

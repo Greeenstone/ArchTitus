@@ -124,3 +124,4 @@ yay -S sweet-gtk-theme
 # disk guis (from gnome)
     install baobab
     install gnome-disk-utility
+
