@@ -43,7 +43,8 @@
     icon_bell = False
     background_darkness = 0.8
     background_type = transparent
-    cursor_color = "#aaaaaa"
+    cursor_color = "#ff00ff"
+    cursor_color_fg = False
     font = DroidSansMono Nerd Font Mono 15
     foreground_color = "#ffffff"
     show_titlebar = False

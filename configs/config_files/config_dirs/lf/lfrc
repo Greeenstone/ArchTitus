@@ -14,8 +14,9 @@ set ifs "\n"
 set scrolloff 10
 set icons
 set period 1
-set hidden false
+set hidden true
 set drawbox true
+# set hiddenfiles ".*"
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml:*.out:*.fls:*.fdb_latexmk:*.toc:*.synctex.gz"
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
@@ -130,8 +131,8 @@ cmd trash ${{
 #     zip -r $1.zip $1
 #     rm -rf $1
 # }}
-cmd zip %echo "Archive Name: " ; read name ; zip -r "${name}" "$fs"
-cmd tar %echo "Archive Name: " ; read name ; tar cvf "${name}.tar" "$fs"
+cmd zip %echo "Archive Name: " ; read name ; zip -r "${name}" "$fx"
+cmd tar %echo "Archive Name: " ; read name ; mkdir $name && mv $fx $name && tar -czvf ${name}.tar.gz $name && rm -rf $name
 
 ##################################
 ### Bindings
@@ -163,7 +164,7 @@ map O
 map o
 
 map O $mimeopen --ask $f
-map o $mimeopen --ask $f
+map o &mimeopen $f
 
 map d trash
 map D delete
@@ -183,7 +184,8 @@ map <esc> clear
 map <esc> unselect
 map <enter> open
 
-map a calcdirsize --info=size
+map as calcdirsize --info=size
+
 map C $code $f #edit current file
 
 map <c-f> filter
@@ -206,18 +208,18 @@ cmd Pictures cd ~/Pictures
 cmd Videos cd ~/Videos
 cmd .config cd ~/.config
 cmd ArchTitus cd ~/ArchTitus
-cmd mnt :cd /mnt ; temp="`pgrep ldm`" ; echo $temp && [ -z $temp ] && ldm -d -u $USER  
+cmd Mounted cd /run/media/lukas
 
 
-map gg Home
+map gh Home
 map gdc  Documents
 map gdw  Downloads
-map gds  Downloads
+map gds  Desktop
 map gp  Pictures
 map gv  Videos
 map gc  .config
 map ga  ArchTitus
-map gm mnt
+map gm  Mounted
 
 # quit
 	# if use lfcd we map:

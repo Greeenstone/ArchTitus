@@ -300,7 +300,7 @@
 		exec --no-startup-id picom -CGb
 		exec_always --no-startup-id ( sleep 1 && feh --bg-scale ~/.wallpaper.jpg ) &
 		# exec guake &
-		
+		exec --no-startup-id udiskie -s  & # mounting utility
 
 # autoconfigure apps 
 	# for_window [class = "^Code"] layout tabbed

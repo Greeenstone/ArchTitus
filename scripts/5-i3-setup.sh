@@ -79,7 +79,8 @@ yay -S sweet-gtk-theme
 # albert
     yay -S albert.bin
     # let albert open with vs-code
-    xdg-mime default visual-studio-code.desktop inode/directory
+    # xdg-mime default visual-studio-code.desktop inode/directory
+    xdg-mime default code-oss.desktop inode/directory
 
     xdg-mime default pinta.desktop image/svg+xml=pinta.desktop
     xdg-mime default pinta.desktop image/bmp=pinta.desktop
