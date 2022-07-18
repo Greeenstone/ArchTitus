@@ -56,6 +56,50 @@
                                     "label": "~/ArchTitus"
                                 },
                                 {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/code",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/code"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/Hobby/vscode_theme/grazlight",
+                                        "path": "/home/lukas/Documents/Hobby/vscode_theme/grazlight",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/Hobby/vscode_theme/grazlight"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/ArchTitus/configs/config_files/config_dirs/obsidian/Code%20Cache",
+                                        "path": "/home/lukas/ArchTitus/configs/config_files/config_dirs/obsidian/Code Cache",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/ArchTitus/configs/config_files/config_dirs/obsidian/Code Cache"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas",
+                                        "path": "/home/lukas",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/home/lukas"
+                                },
+                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -236,6 +280,13 @@
                                 {
                                     "id": "workbench.action.selectProductIconTheme",
                                     "label": "&&Product Icon Theme"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.userDataSync.actions.turnOn",
+                                    "label": "Turn on Settings Sync..."
                                 }
                             ]
                         }
@@ -288,22 +339,6 @@
                     {
                         "id": "editor.action.clipboardCopyAction",
                         "label": "&&Copy"
-                    },
-                    {
-                        "id": "submenuitem.28",
-                        "label": "Copy As",
-                        "submenu": {
-                            "items": [
-                                {
-                                    "id": "gitlens.copyRemoteFileUrlToClipboard",
-                                    "label": "Copy Remote File Url"
-                                },
-                                {
-                                    "id": "gitlens.copyRemoteFileUrlFrom",
-                                    "label": "Copy Remote File Url From..."
-                                }
-                            ]
-                        }
                     },
                     {
                         "id": "editor.action.clipboardPasteAction",
@@ -483,8 +518,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel",
-                                    "checked": true
+                                    "label": "Show &&Panel"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -654,10 +688,6 @@
                         "label": "E&&xtensions"
                     },
                     {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
-                    },
-                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -716,8 +746,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1382,9 +1411,8 @@
                 "userSettingsLabel": "ctrl+shift+f"
             },
             "workbench.view.scm": {
-                "label": "Ctrl+Shift+G G",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+shift+g g"
+                "label": "Ctrl+Shift+G",
+                "userSettingsLabel": "ctrl+shift+g"
             },
             "workbench.view.debug": {
                 "label": "Ctrl+Shift+D",
@@ -1577,32 +1605,43 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#1e1e1e",
+    "themeBackground": "#000000",
     "windowSplash": {
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#cccccc",
-            "background": "#1e1e1e",
-            "editorBackground": "#1e1e1e",
-            "titleBarBackground": "#3c3c3c",
-            "activityBarBackground": "#333333",
-            "sideBarBackground": "#252526",
-            "statusBarBackground": "#007acc",
-            "statusBarNoFolderBackground": "#68217a"
+            "foreground": "#ffffff",
+            "background": "#000000",
+            "editorBackground": "#000000",
+            "titleBarBackground": "#000000",
+            "activityBarBackground": "#0c0e14",
+            "sideBarBackground": "#0c0e14",
+            "statusBarBackground": "#0c0e14",
+            "statusBarNoFolderBackground": "#68217a",
+            "windowBorder": "#7d7c13"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 1061,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/lukas/.config/Code - OSS/Backups/1658099683887",
+            "folder": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code",
+            "backupPath": "/home/lukas/.config/Code - OSS/Backups/efcec3682fb6819c212c954fee1549e0",
+            "uiState": {
+                "mode": 1,
+                "x": 0,
+                "y": 25,
+                "width": 2560,
+                "height": 1415
+            }
+        },
+        "lastPluginDevelopmentHostWindow": {
             "uiState": {
                 "mode": 1,
                 "x": 1281,
@@ -1611,6 +1650,29 @@
                 "height": 1413
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code",
+                "backupPath": "/home/lukas/.config/Code - OSS/Backups/efcec3682fb6819c212c954fee1549e0",
+                "uiState": {
+                    "mode": 1,
+                    "x": 0,
+                    "y": 25,
+                    "width": 2560,
+                    "height": 1415
+                }
+            },
+            {
+                "folder": "file:///home/lukas/ArchTitus",
+                "backupPath": "/home/lukas/.config/Code - OSS/Backups/d4f8814d71d32d311f81fefac343775b",
+                "uiState": {
+                    "mode": 1,
+                    "x": 0,
+                    "y": 25,
+                    "width": 2560,
+                    "height": 1415
+                }
+            }
+        ]
     }
 }

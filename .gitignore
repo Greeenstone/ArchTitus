@@ -4,3 +4,9 @@ archnikus.code-workspace
 setup.conf
 *.log
 credentials.txt
+
+# **/Code - OSS/*
+**/User/History/
+**/Service Worker/
+**/CachedData/
+**/Cache/Cache_Data/

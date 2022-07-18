@@ -22,6 +22,8 @@
     # temp="`R --version`" && temp=${temp:10:3}
     # echo "export R_LIBS_USER=/home/lukas/R/x86_64-pc-linux-gnu-library/$temp" >> ~/.profile
     # install.packages("languageserver") # for vscode linting
+    Rscript -e 'install.packages(c("languageserver", "lintr"))' 
+    Rscript -e 'install.packages(c("reticulate", "randomForest", "earth", "mgcv", "caret", "parallel"))' 
 
 # rclone (execute by hand)
     # go here: https://console.cloud.google.com/apis/credentials?project=psyched-circuit-342100

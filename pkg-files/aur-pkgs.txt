@@ -20,3 +20,5 @@ dmenu-recent-aliases-git
 gtk3-nocsd-git
 # fonts
 nerd-fonts-complete
+#for_pyton_notebooks_in_code
+code-features-insiders

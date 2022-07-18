@@ -339,7 +339,7 @@
 	bindsym $super+Pause mode "$mode_system" 
 
 # App Icons   (requires `i3/util.py` file)
-	exec_always killall autoname_workspaces ; ~/.config/i3/autoname_workspaces.py --norenumber_workspaces &
+	exec_always --no-startup-id ~/.config/i3/restart.sh &
 
 # auto-tiling / dynamic tiling
 	# exec --no-startup-id ~/.config/i3/i3-auto-layout # not working

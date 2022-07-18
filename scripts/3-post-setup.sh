@@ -82,7 +82,7 @@ echo -ne "
                     Enabling Essential Services
 -------------------------------------------------------------------------
 "
-systemctl enable cups.socket
+systemctl enable cups.service
 echo "  Cups enabled"
 systemctl enable bluetooth
 echo "  Bluetooth enabled"

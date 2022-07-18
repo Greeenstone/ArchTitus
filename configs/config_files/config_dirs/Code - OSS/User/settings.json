@@ -127,4 +127,8 @@
     "editor.suggest.localityBonus": true,
     "files.insertFinalNewline": true,
     "editor.lineDecorationsWidth": 0,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "[python]": {
+        "editor.formatOnPaste": false
+    }
 }
