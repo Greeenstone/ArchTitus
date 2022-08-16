@@ -23,14 +23,6 @@
     ///////////////////////////////
     // verschieben
     {
-        "key": "ctrl+t right",
-        "command": "workbench.action.positionPanelRight"
-    },
-    {
-        "key": "ctrl+t down",
-        "command": "workbench.action.positionPanelBottom"
-    },
-    {
         "key": "ctrl+shift+right",
         "command": "-workbench.action.terminal.resizePaneRight",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
@@ -380,17 +372,17 @@
     //     "when": "editorTextFocus && foldingEnabled"
     // },
     {
-        "key": "ctrl+i",
+        "key": "ctrl+t",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+i",
+        "key": "ctrl+t",
         "command": "editor.debug.action.showDebugHover",
         "when": "editorTextFocus && inDebugMode"
     },
     {
-        "key": "ctrl+i",
+        "key": "ctrl+t",
         "command": "workbench.action.showTreeHover",
         "when": "customTreeView && listFocus && !inputFocus"
     },
@@ -444,5 +436,13 @@
     {
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "cursorRedo"
+    },
+    {
+        "key": "alt+e",
+        "command": "editor.toggleFold"
     },
 ]

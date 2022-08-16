@@ -10,3 +10,6 @@ credentials.txt
 **/Service Worker/
 **/CachedData/
 **/Cache/Cache_Data/
+
+#albert
+**/albert/core.db

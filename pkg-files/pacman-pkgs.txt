@@ -99,3 +99,8 @@ xclip
 nano-syntax-highlighting
 progress
 udiskie
+obsidian
+pinta
+translate-shell
+android-file-transfer
+

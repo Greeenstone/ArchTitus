@@ -1,9 +1,8 @@
 {
     "update.mode": "none",
-    "editor.fontSize": 20,
+    "editor.fontSize": 18,
     "r.rpath.linux": "/bin/R",
-    "r.rterm.linux": "/home/lukas/.local/bin/radian",
-    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.fontSize": 18,
     "r.bracketedPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
@@ -92,10 +91,10 @@
     "workbench.startupEditor": "none",
     "git.enableSmartCommit": true, // bar with directory
     // "debug.console.fontFamily": "Cascadia Code Light",
-    "debug.console.fontSize": 18,
+    "debug.console.fontSize": 16,
     "debug.console.lineHeight": 22,
     "workbench.colorTheme": "LukasLeight",
-    "markdown.preview.fontSize": 18,
+    "markdown.preview.fontSize": 16,
     "r.session.viewers.viewColumn": {
         "browser": "Disable",
         "viewer": "Two",
@@ -108,8 +107,7 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "notebook.output.textLineLimit": 50,
     "notebook.outputFontSize": 16,
-    "notebook.outputLineHeight": 18,
-    "jupyter.generateSVGPlots": true,
+    "notebook.outputLineHeight": 1.1,
     "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
     // Language specific settings
     "[latex]": {
@@ -121,7 +119,6 @@
     "[markdown]": {
         "editor.wordWrap": "on"
     },
-    "r.plot.useHttpgd": true,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.quickSuggestionsDelay": 50,
     "editor.suggest.localityBonus": true,
@@ -130,5 +127,14 @@
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "[python]": {
         "editor.formatOnPaste": false
-    }
+    },
+    "r.rterm.linux": "/home/lukas/.local/bin/radian",
+    "r.plot.useHttpgd": true,
+    "path-intellisense.autoTriggerNextSuggestion": true,
+    "path-intellisense.showHiddenFiles": true,
+    "path-intellisense.mappings": {
+        "./": "${workspaceRoot}",
+    },
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "workbench.activityBar.visible": false
 }

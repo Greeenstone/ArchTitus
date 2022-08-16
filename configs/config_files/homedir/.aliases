@@ -28,3 +28,6 @@ lfcd () {
 }
 alias lf=lfcd
 bindkey -s '^o' '^ulfcd\n'
+
+# get sorted list of programs and their ram usage
+ram="ps -e -o pid,vsz,comm= | sort -n -k 2"

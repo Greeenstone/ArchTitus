@@ -99,8 +99,7 @@
 	floating_modifier $alt
 
 	# Reload configuration
-	bindsym Caps exec source ~/.xsession
-	bindsym $super+$shift+r reload
+	bindsym $super+$shift+r exec i3-msg restart && source ~/.xsession
 	bindsym $super+Control+r restart
 
 
@@ -184,7 +183,6 @@
 			cpu \
 			memory \
 			pasink \
-			thunderbird \
 			date \
 			time \
 			battery \
@@ -192,13 +190,14 @@
 			cpu.warning=70 cpu.critical=90 cpu.format="{:.1f}" disk.format="{left}" \
 			disk.warning=85 disk.critical=95 memory.warning=85 memory.critical:95 \
 			memory.format="{percent:.01f}%" \
-			battery.warning=70 battery.critical=20 battery.showpowerconsumption="false" \
+			battery.warning=99 battery.critical=20 battery.showpowerconsumption="false" \
 			spotify.format="{title}" traffic.showname="False" traffic.format="{:.1f}" \
 			traffic.graphlen=8 progress.placeholder="" thunderbird.home=~/.thunderbird \
 			thunderbird.inboxes=mail.ethz.ch/INBOX.msf,imap.gmail.com/INBOX.msf  \
 			-t night-powerline \
 			--autohide battery
 			# network_traffic \
+			# thunderbird \
 			# brightness \
 			# traffic \
 			## thunderbird list mailboxes command:>>  find ~/.thunderbird -name '*.msf' | awk -F '/' '{print $(NF-1)"/"$(NF)}'
@@ -268,6 +267,7 @@
 	# Launcher
 		# bindysm $mod+d albert toggle
 		exec --no-startup-id albert &
+		exec_always --no-startup-id ~/.config/albert/i3_hide_albert_on_focus_out.sh &
 		# bindsym --release Hyper_L exec --no-startup-id ~/.config/i3/super_menu.sh &
 		bindsym $super+f exec --no-startup-id ~/.config/i3/super_menu.sh &
 		# bindsym $F11 exec --no-startup-id ~/.config/i3/super_menu.sh &
@@ -291,6 +291,7 @@
 ###### AUTOSTART APPLICATIONS ######
 ##
 ##
+		exec_always ~/.config/i3/i3scripts/autoname_workspaces.py &
 		exec --no-startup-id dunst & # notification manager
 		# exec firefox &
 		exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox' &

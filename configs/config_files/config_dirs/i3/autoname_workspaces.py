@@ -124,6 +124,7 @@ WINDOW_ICONS = {
     "quasselclient": fa.icons["comments"],
     "rambox": fa.icons["whatsapp"],
     "rhythmbox": fa.icons["play"],
+    "rstudio": "R",
     "robo3t": fa.icons["database"],
     "seahorse": fa.icons["key"],
     "signal": fa.icons["comment"],
@@ -155,7 +156,8 @@ WINDOW_ICONS = {
     "zoom ": fa.icons["video"],
     "Zoom - Licensed Account": fa.icons["video"],
     "Zoom Meeting": fa.icons["video"],
-    "zotero": fa.icons["file-pdf"],
+    # "zotero": fa.icons["file-pdf"],
+    "zotero": "Z",
 }
 
 

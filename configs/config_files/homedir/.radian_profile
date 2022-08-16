@@ -31,5 +31,5 @@ options(radian.color_scheme = "monokai")
 # dark  mode:
 
 # get yellow prompt     "\033[38;5;11m" describes yellow
-options(radian.prompt = "\033[38;5;11mr$>\033[0m ")
+options(radian.prompt = "\033[38;5;11m>\033[0m ")
 # options(radian.shell_prompt = "\033[38;5;11m#!>\033[0m ")

@@ -32,13 +32,14 @@
                         "label": "Open Wor&&kspace from File..."
                     },
                     {
-                        "id": "submenuitem.37",
+                        "id": "submenuitem.MenubarRecentMenu",
                         "label": "Open &&Recent",
                         "submenu": {
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -70,34 +71,89 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/Documents/Hobby/vscode_theme/grazlight",
-                                        "path": "/home/lukas/Documents/Hobby/vscode_theme/grazlight",
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/CorrectTimeSeries",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/CorrectTimeSeries",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/Hobby/vscode_theme/grazlight"
+                                    "label": "~/Documents/ETH/MASTER_THESIS/CorrectTimeSeries"
                                 },
                                 {
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/ArchTitus/configs/config_files/config_dirs/obsidian/Code%20Cache",
-                                        "path": "/home/lukas/ArchTitus/configs/config_files/config_dirs/obsidian/Code Cache",
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/latex",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/latex",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/ArchTitus/configs/config_files/config_dirs/obsidian/Code Cache"
+                                    "label": "~/Documents/ETH/MASTER_THESIS/latex"
                                 },
                                 {
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas",
-                                        "path": "/home/lukas",
+                                        "external": "file:///home/lukas/Desktop/du/latex",
+                                        "path": "/home/lukas/Desktop/du/latex",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/home/lukas"
+                                    "label": "~/Desktop/du/latex"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/ArchTitus/configs/config_files/config_dirs/lf",
+                                        "path": "/home/lukas/ArchTitus/configs/config_files/config_dirs/lf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/ArchTitus/configs/config_files/config_dirs/lf"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/CorrectSentinelItpl",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/CorrectSentinelItpl",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/CorrectSentinelItpl"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///tmp/ownCloud-logdir",
+                                        "path": "/tmp/ownCloud-logdir",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/tmp/ownCloud-logdir"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/pCloudDrive",
+                                        "path": "/home/lukas/pCloudDrive",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/pCloudDrive"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/beamer",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/beamer",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/beamer"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -106,56 +162,111 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/Downloads/Untitled-2.py",
-                                        "path": "/home/lukas/Downloads/Untitled-2.py",
+                                        "external": "file:///home/lukas/Desktop/du/MasterThesisSfS.synctex",
+                                        "path": "/home/lukas/Desktop/du/MasterThesisSfS.synctex",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Downloads/Untitled-2.py"
+                                    "label": "~/Desktop/du/MasterThesisSfS.synctex"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///run/media/lukas/9839-10D7/Backup/Unpack-1964/home_2022-07-16/.config/Code/User/sync/settings/20220716T133115.json",
-                                        "path": "/run/media/lukas/9839-10D7/Backup/Unpack-1964/home_2022-07-16/.config/Code/User/sync/settings/20220716T133115.json",
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code/data/yieldmapping_data/yearly_train_test_sets/2019_WW_covariates_test.pkl",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/code/data/yieldmapping_data/yearly_train_test_sets/2019_WW_covariates_test.pkl",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/run/media/lukas/9839-10D7/Backup/Unpack-1964/home_2022-07-16/.config/Code/User/sync/settings/20220716T133115.json"
+                                    "label": "~/Documents/ETH/MASTER_THESIS/code/data/yieldmapping_data/yearly_train_test_sets/2019_WW_covariates_test.pkl"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///run/media/lukas/9839-10D7/Backup/Unpack-1964/home_2022-07-16/.config/Code/User/sync/keybindings/20220716T133115.json",
-                                        "path": "/run/media/lukas/9839-10D7/Backup/Unpack-1964/home_2022-07-16/.config/Code/User/sync/keybindings/20220716T133115.json",
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code/data/yieldmapping_data/cloudy_data/Cereals_covariates_tot.csv",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/code/data/yieldmapping_data/cloudy_data/Cereals_covariates_tot.csv",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/run/media/lukas/9839-10D7/Backup/Unpack-1964/home_2022-07-16/.config/Code/User/sync/keybindings/20220716T133115.json"
+                                    "label": "~/Documents/ETH/MASTER_THESIS/code/data/yieldmapping_data/cloudy_data/Cereals_covariates_tot.csv"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/ArchTitus/configs/config_files/config_dirs/qt5ct/qt5ct.conf",
-                                        "path": "/home/lukas/ArchTitus/configs/config_files/config_dirs/qt5ct/qt5ct.conf",
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/latex/figures/ndvi_corr/scl_residuals_scatter.png",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/latex/figures/ndvi_corr/scl_residuals_scatter.png",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/ArchTitus/configs/config_files/config_dirs/qt5ct/qt5ct.conf"
+                                    "label": "~/Documents/ETH/MASTER_THESIS/latex/figures/ndvi_corr/scl_residuals_scatter.png"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/.zshrc",
-                                        "path": "/home/lukas/.zshrc",
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code/ndvi_corr/eval_correction_method.R",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/code/ndvi_corr/eval_correction_method.R",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.zshrc"
+                                    "label": "~/Documents/ETH/MASTER_THESIS/code/ndvi_corr/eval_correction_method.R"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/zOTHER/Computational%20Statistics/skript.pdf",
+                                        "path": "/home/lukas/Documents/ETH/zOTHER/Computational Statistics/skript.pdf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/zOTHER/Computational Statistics/skript.pdf"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Pictures/compare%26delete.R",
+                                        "path": "/home/lukas/Pictures/compare&delete.R",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Pictures/compare&&delete.R"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/2022-07-28-android/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp%20Audio/Private/.nomedia",
+                                        "path": "/home/lukas/2022-07-28-android/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Audio/Private/.nomedia",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/2022-07-28-android/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Audio/Private/.nomedia"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Downloads/Bilder%20%26%20Videos%281%29/Bilder%20%26%20Videos/compare%26delete.R",
+                                        "path": "/home/lukas/Downloads/Bilder & Videos(1)/Bilder & Videos/compare&delete.R",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/Bilder && Videos(1)/Bilder && Videos/compare&&delete.R"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -209,7 +320,7 @@
                         "id": "vscode.menubar.separator"
                     },
                     {
-                        "id": "submenuitem.39",
+                        "id": "submenuitem.MenubarShare",
                         "label": "Share",
                         "submenu": {
                             "items": [
@@ -228,7 +339,7 @@
                         "label": "A&&uto Save"
                     },
                     {
-                        "id": "submenuitem.36",
+                        "id": "submenuitem.MenubarPreferencesMenu",
                         "label": "&&Preferences",
                         "submenu": {
                             "items": [
@@ -474,7 +585,7 @@
                         "id": "vscode.menubar.separator"
                     },
                     {
-                        "id": "submenuitem.25",
+                        "id": "submenuitem.MenubarAppearanceMenu",
                         "label": "&&Appearance",
                         "submenu": {
                             "items": [
@@ -495,30 +606,30 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleMenuBar",
-                                    "label": "Show Menu &&Bar"
+                                    "label": "Menu &&Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Primary Side Bar",
+                                    "label": "&&Primary Side Bar",
                                     "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
-                                    "label": "Show Secondary Si&&de Bar"
+                                    "label": "Secondary Si&&de Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
-                                    "label": "Show S&&tatus Bar",
+                                    "label": "S&&tatus Bar",
                                     "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleActivityBarVisibility",
-                                    "label": "Show &&Activity Bar",
-                                    "checked": true
+                                    "label": "&&Activity Bar"
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -528,7 +639,7 @@
                                     "label": "&&Move Primary Side Bar Right"
                                 },
                                 {
-                                    "id": "submenuitem.35",
+                                    "id": "submenuitem.MenubarPanelPositionMenu",
                                     "label": "Panel Position",
                                     "submenu": {
                                         "items": [
@@ -549,7 +660,7 @@
                                     }
                                 },
                                 {
-                                    "id": "submenuitem.34",
+                                    "id": "submenuitem.MenubarPanelAlignmentMenu",
                                     "label": "Align Panel",
                                     "submenu": {
                                         "items": [
@@ -592,7 +703,7 @@
                         }
                     },
                     {
-                        "id": "submenuitem.32",
+                        "id": "submenuitem.MenubarLayoutMenu",
                         "label": "Editor &&Layout",
                         "submenu": {
                             "items": [
@@ -711,15 +822,16 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     },
                     {
                         "id": "editor.action.toggleMinimap",
-                        "label": "Show &&Minimap"
+                        "label": "&&Minimap"
                     },
                     {
                         "id": "breadcrumbs.toggle",
-                        "label": "Show &&Breadcrumbs"
+                        "label": "&&Breadcrumbs"
                     },
                     {
                         "id": "editor.action.toggleRenderWhitespace",
@@ -746,13 +858,14 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
                     },
                     {
-                        "id": "submenuitem.40",
+                        "id": "submenuitem.MenubarSwitchEditorMenu",
                         "label": "Switch &&Editor",
                         "submenu": {
                             "items": [
@@ -801,7 +914,7 @@
                         }
                     },
                     {
-                        "id": "submenuitem.41",
+                        "id": "submenuitem.MenubarSwitchGroupMenu",
                         "label": "Switch &&Group",
                         "submenu": {
                             "items": [
@@ -1003,7 +1116,7 @@
                         "label": "Toggle &&Breakpoint"
                     },
                     {
-                        "id": "submenuitem.33",
+                        "id": "submenuitem.MenubarNewBreakpointMenu",
                         "label": "&&New Breakpoint",
                         "submenu": {
                             "items": [
@@ -1374,16 +1487,6 @@
                 "label": "Alt+Escape",
                 "userSettingsLabel": "alt+escape"
             },
-            "workbench.action.positionPanelBottom": {
-                "label": "Ctrl+T DownArrow",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+t down"
-            },
-            "workbench.action.positionPanelRight": {
-                "label": "Ctrl+T RightArrow",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+t right"
-            },
             "workbench.action.zoomIn": {
                 "label": "Ctrl+Shift+0",
                 "userSettingsLabel": "ctrl+shift+0"
@@ -1623,8 +1726,8 @@
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
-            "activityBarWidth": 48,
-            "sideBarWidth": 1061,
+            "activityBarWidth": 0,
+            "sideBarWidth": 305,
             "statusBarHeight": 22,
             "windowBorder": false
         }
@@ -1637,8 +1740,8 @@
                 "mode": 1,
                 "x": 0,
                 "y": 25,
-                "width": 2560,
-                "height": 1415
+                "width": 1920,
+                "height": 1055
             }
         },
         "lastPluginDevelopmentHostWindow": {
@@ -1650,29 +1753,6 @@
                 "height": 1413
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code",
-                "backupPath": "/home/lukas/.config/Code - OSS/Backups/efcec3682fb6819c212c954fee1549e0",
-                "uiState": {
-                    "mode": 1,
-                    "x": 0,
-                    "y": 25,
-                    "width": 2560,
-                    "height": 1415
-                }
-            },
-            {
-                "folder": "file:///home/lukas/ArchTitus",
-                "backupPath": "/home/lukas/.config/Code - OSS/Backups/d4f8814d71d32d311f81fefac343775b",
-                "uiState": {
-                    "mode": 1,
-                    "x": 0,
-                    "y": 25,
-                    "width": 2560,
-                    "height": 1415
-                }
-            }
-        ]
+        "openedWindows": []
     }
 }

@@ -59,3 +59,8 @@
     swapon /swapfile
     echo "/swapfile none swap defaults 0 0" >> /etc/fstab
     exit
+
+
+# polybox setup
+    install owncloud-client
+    # set server as: https://polybox.ethz.ch

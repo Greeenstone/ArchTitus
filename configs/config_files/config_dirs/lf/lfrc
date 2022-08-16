@@ -159,15 +159,15 @@ map u
 map i
 map [
 map ]
-map m
+# map m # dont unmap m, since it is used for chdir
 map O
 map o
 
 map O $mimeopen --ask $f
 map o &mimeopen $f
 
-map d trash
-map D delete
+map <a-D> trash
+# map D delete
 
 map E extract
 map Z zip
