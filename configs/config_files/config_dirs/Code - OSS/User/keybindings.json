@@ -363,9 +363,9 @@
         "command": "-latex-workshop.onAltEnterKey",
         "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
     },
-    /////////////////////////////////
+    ////////////////////////////////
     //  NEW
-    /////////////////////////////////
+    ////////////////////////////////
     // { // want to rempap focus
     //     "key": "alt+f",
     //     "command": "editor.toggleFold",

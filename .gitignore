@@ -1,17 +1,14 @@
 install.conf
 installlog.txt
-archnikus.code-workspace
 setup.conf
 *.log
 credentials.txt
 
 # **/Code - OSS/*
-**/User/History/
-**/Service Worker/
-**/CachedData/
-**/Cache_Data/**
-
 **/Code\ -\ OSS/
+!configs/config_files/config_dirs/Code - OSS/User/keybindings.json
+!configs/config_files/config_dirs/Code - OSS/User/settings.json
+*.vscbd
 
 #albert
 **/albert/core.db
@@ -19,7 +16,4 @@ credentials.txt
 **/config_dirs/obsidian/**
 **/config_dirs/obsidian/*
 **/config_dirs/obsidian/
-configs/config_files/config_dirs/Code - OSS/Cache/Cache_Data/**
-configs/config_files/config_dirs/Code - OSS/Cache/Cache_Data/*
-configs/config_files/config_dirs/Code - OSS/Cache/Cache_Data/
 
