@@ -1,4 +1,7 @@
 #! /bin/bash  # <-- to trick vs code
+
+exec --no-startup-id albert &
+
 ##### KEYBINDS ######
 ##
 ##
@@ -32,6 +35,7 @@
 			bindsym $super+$move+l move right
 	# between workspaces
 			bindsym $super+b workspace back_and_forth
+			bindsym $super+$move+b move workspace back_and_forth; workspace back_and_forth
 			bindsym $alt+Tab exec rofi -show "window" &
 		# next
 			bindsym $super+i workspace next
@@ -44,6 +48,7 @@
 			bindsym $super+$move+n exec ~/.config/i3/new_workspace.py --move_focused
 		
 		# set workspace names & variables
+		set $ws0 "0"
 		set $ws1 "1"
 		set $ws2 "2"
 		set $ws3 "3"
@@ -65,6 +70,8 @@
 		# bindsym $super+8 workspace number $ws8
 		# bindsym $super+9 workspace number $ws9
 		# bindsym $super+0 workspace number $ws10
+		bindsym $super+c exec ~/.config/i3/empty_workspace_launcher.sh 0 ~/.config/i3/super_menu.sh &
+		bindsym $super+f exec ~/.config/i3/empty_workspace_launcher.sh 1 /usr/bin/firefox &
 		bindsym $super+1 exec ~/.config/i3/empty_workspace_launcher.sh 1 ~/.config/i3/super_menu.sh &
 		bindsym $super+2 exec ~/.config/i3/empty_workspace_launcher.sh 2 ~/.config/i3/super_menu.sh &
 		bindsym $super+3 exec ~/.config/i3/empty_workspace_launcher.sh 3 ~/.config/i3/super_menu.sh &
@@ -75,17 +82,20 @@
 		bindsym $super+8 exec ~/.config/i3/empty_workspace_launcher.sh 8 ~/.config/i3/super_menu.sh &
 		bindsym $super+9 exec ~/.config/i3/empty_workspace_launcher.sh 9 ~/.config/i3/super_menu.sh &
 		bindsym $super+0 exec ~/.config/i3/empty_workspace_launcher.sh 10 ~/.config/i3/super_menu.sh &
+		bindsym $super+m exec ~/.config/i3/empty_workspace_launcher.sh 10 /usr/bin/spotify &
 		# move focused container to workspace
-		bindsym $super+$move+1 move container to workspace number $ws1
-		bindsym $super+$move+2 move container to workspace number $ws2
-		bindsym $super+$move+3 move container to workspace number $ws3
-		bindsym $super+$move+4 move container to workspace number $ws4
-		bindsym $super+$move+5 move container to workspace number $ws5
-		bindsym $super+$move+6 move container to workspace number $ws6
-		bindsym $super+$move+7 move container to workspace number $ws7
-		bindsym $super+$move+8 move container to workspace number $ws8
-		bindsym $super+$move+9 move container to workspace number $ws9
-		bindsym $super+$move+0 move container to workspace number $ws10
+		bindsym $super+$move+c move container to workspace number $ws0; workspace $ws0
+		bindsym $super+$move+1 move container to workspace number $ws1; workspace $ws1
+		bindsym $super+$move+2 move container to workspace number $ws2; workspace $ws2
+		bindsym $super+$move+3 move container to workspace number $ws3; workspace $ws3
+		bindsym $super+$move+4 move container to workspace number $ws4; workspace $ws4
+		bindsym $super+$move+5 move container to workspace number $ws5; workspace $ws5
+		bindsym $super+$move+6 move container to workspace number $ws6; workspace $ws6
+		bindsym $super+$move+7 move container to workspace number $ws7; workspace $ws7
+		bindsym $super+$move+8 move container to workspace number $ws8; workspace $ws8
+		bindsym $super+$move+9 move container to workspace number $ws9; workspace $ws9
+		bindsym $super+$move+0 move container to workspace number $ws10; workspace $ws10
+		bindsym $super+$move+m move container to workspace number $ws10; workspace $ws10
 		# Move focus to the parent container
 		# bindsym $super+d focus child
 		# bindsym $super+a focus parent  
@@ -151,8 +161,9 @@
 
 	# Colors
 		# class                 border  bground text    indicator child_border
-		client.focused          #C50ED2 #000000 #FFFFFF #C50ED2   #EF11FF
-		client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+		client.focused          #FF00FF #000000 #FFFFFF #FF00FF   #EF11FF
+		client.focused_inactive #FF00FF #000000 #FFFFFF #FF00FF   #EF11FF
+		# client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 		client.unfocused        #222222 #000000 #888888 #292D2E   #222222
 		client.urgent           #C50ED2 #EF11FF #FFFFFF #EF11FF   #EF11FF
 		client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
@@ -230,7 +241,7 @@
 	# Terminal
 	bindsym $super+Return exec --no-startup-id i3-sensible-terminal &
 	# Thunderbird
-	bindsym $super+m exec GTK_THEME=Arc /bin/thunderbird &
+	# bindsym $super+m exec GTK_THEME=Arc /bin/thunderbird &
 
 	# File manager
 	# bindsym $super+Shift+f exec --no-startup-id xst -e ranger &
@@ -266,12 +277,11 @@
 
 	# Launcher
 		# bindysm $mod+d albert toggle
-		exec --no-startup-id albert &
 		exec_always --no-startup-id ~/.config/albert/i3_hide_albert_on_focus_out.sh &
 		# bindsym --release Hyper_L exec --no-startup-id ~/.config/i3/super_menu.sh &
-		bindsym $super+f exec --no-startup-id ~/.config/i3/super_menu.sh &
+		bindsym $super+d exec --no-startup-id ~/.config/i3/super_menu.sh &
 		# bindsym $F11 exec --no-startup-id ~/.config/i3/super_menu.sh &
-		bindsym $super+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#EF11FF' -sf '#000000' -fn 'monospace-16' -p 'run: '"
+		bindsym $super+Shift+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#EF11FF' -sf '#000000' -fn 'monospace-16' -p 'run: '"
 		# bindsym $super+d exec "rofi -modi drun,run -show drun"
 		bindsym $super+r exec rofi -no-lazy-grab -show drun -icon-theme "Sweet-Teal" -kb-cancel "Hyper_L"
 
@@ -304,7 +314,8 @@
 		exec --no-startup-id udiskie -s  & # mounting utility
 
 # autoconfigure apps 
-	# for_window [class = "^Code"] layout tabbed
+	for_window [class = "^Code"] move to workspace number 0, layout tabbed
+	for_window [class="code-oss"] move to workspace number 0, layout tabbed
 	for_window [class="Spotify"] move to workspace number 10
 	for_window [title="R Graphics"] floating enable move absolute position 0 ppt 70 ppt; resize set height 32 ppt ; resize set width 40 ppt
 	
@@ -317,8 +328,8 @@
 
 
 # clipboard
-	bindsym $super+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-	bindsym $super+$shift+c exec greenclip clear
+	bindsym $super+g exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+	bindsym $super+$shift+g exec greenclip clear
 	exec greenclip daemon # clipboard manager
 
 	# color-picker

@@ -38,8 +38,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -71,23 +70,34 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/CorrectTimeSeries",
-                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/CorrectTimeSeries",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/ETH/MASTER_THESIS/CorrectTimeSeries"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/latex",
                                         "path": "/home/lukas/Documents/ETH/MASTER_THESIS/latex",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/ETH/MASTER_THESIS/latex"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/beamer",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/beamer",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/beamer"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/CorrectTimeSeries",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/CorrectTimeSeries",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/CorrectTimeSeries"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -145,18 +155,62 @@
                                     "label": "~/pCloudDrive"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/beamer",
-                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/beamer",
+                                        "external": "file:///home/lukas/Documents/Verwaltung/Gesundheit/Krankenversicherung/Formular%20A%20signed.PDF",
+                                        "path": "/home/lukas/Documents/Verwaltung/Gesundheit/Krankenversicherung/Formular A signed.PDF",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/ETH/MASTER_THESIS/beamer"
+                                    "label": "~/Documents/Verwaltung/Gesundheit/Krankenversicherung/Formular A signed.PDF"
                                 },
                                 {
-                                    "id": "vscode.menubar.separator"
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/Organisatorisches/gregor/Aufgabenstellung_MA_LukasGraz.pdf",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/Organisatorisches/gregor/Aufgabenstellung_MA_LukasGraz.pdf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/Organisatorisches/gregor/Aufgabenstellung_MA_LukasGraz.pdf"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code/data/computation_results/ml_models/R/ml_randomForest_randomForest_rf_randomForest_ss_noex.rds",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/code/data/computation_results/ml_models/R/ml_randomForest_randomForest_rf_randomForest_ss_noex.rds",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/code/data/computation_results/ml_models/R/ml_randomForest_randomForest_rf_randomForest_ss_noex.rds"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code/data/computation_results/ml_models/R/ml_randomForest_randomForest_rf_randomForest_dl_rob_rew_1.rds",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/code/data/computation_results/ml_models/R/ml_randomForest_randomForest_rf_randomForest_dl_rob_rew_1.rds",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/code/data/computation_results/ml_models/R/ml_randomForest_randomForest_rf_randomForest_dl_rob_rew_1.rds"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf",
+                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -212,61 +266,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/ETH/MASTER_THESIS/code/ndvi_corr/eval_correction_method.R"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/lukas/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf",
-                                        "path": "/home/lukas/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/ETH/MASTER_THESIS/literatur/UNPOBLISHED_DRAFT_Yieldmapping.pdf"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/lukas/Documents/ETH/zOTHER/Computational%20Statistics/skript.pdf",
-                                        "path": "/home/lukas/Documents/ETH/zOTHER/Computational Statistics/skript.pdf",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/ETH/zOTHER/Computational Statistics/skript.pdf"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/lukas/Pictures/compare%26delete.R",
-                                        "path": "/home/lukas/Pictures/compare&delete.R",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Pictures/compare&&delete.R"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/lukas/2022-07-28-android/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp%20Audio/Private/.nomedia",
-                                        "path": "/home/lukas/2022-07-28-android/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Audio/Private/.nomedia",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/2022-07-28-android/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Audio/Private/.nomedia"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/lukas/Downloads/Bilder%20%26%20Videos%281%29/Bilder%20%26%20Videos/compare%26delete.R",
-                                        "path": "/home/lukas/Downloads/Bilder & Videos(1)/Bilder & Videos/compare&delete.R",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Downloads/Bilder && Videos(1)/Bilder && Videos/compare&&delete.R"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -858,8 +857,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1727,21 +1725,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 0,
-            "sideBarWidth": 305,
+            "sideBarWidth": 721,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/lukas/Documents/ETH/MASTER_THESIS/code",
-            "backupPath": "/home/lukas/.config/Code - OSS/Backups/efcec3682fb6819c212c954fee1549e0",
+            "folder": "file:///home/lukas/ArchTitus",
+            "backupPath": "/home/lukas/.config/Code - OSS/Backups/d4f8814d71d32d311f81fefac343775b",
             "uiState": {
                 "mode": 1,
                 "x": 0,
-                "y": 25,
+                "y": 30,
                 "width": 1920,
-                "height": 1055
+                "height": 1170
             }
         },
         "lastPluginDevelopmentHostWindow": {
@@ -1753,6 +1751,29 @@
                 "height": 1413
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///home/lukas/Documents/ETH/MASTER_THESIS/latex",
+                "backupPath": "/home/lukas/.config/Code - OSS/Backups/062a8cfb6f376a67e997c92a177ee568",
+                "uiState": {
+                    "mode": 1,
+                    "x": 0,
+                    "y": 30,
+                    "width": 1920,
+                    "height": 1170
+                }
+            },
+            {
+                "folder": "file:///home/lukas/ArchTitus",
+                "backupPath": "/home/lukas/.config/Code - OSS/Backups/d4f8814d71d32d311f81fefac343775b",
+                "uiState": {
+                    "mode": 1,
+                    "x": 0,
+                    "y": 30,
+                    "width": 1920,
+                    "height": 1170
+                }
+            }
+        ]
     }
 }

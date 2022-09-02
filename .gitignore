@@ -9,7 +9,17 @@ credentials.txt
 **/User/History/
 **/Service Worker/
 **/CachedData/
-**/Cache/Cache_Data/
+**/Cache_Data/**
+
+**/Code\ -\ OSS/
 
 #albert
 **/albert/core.db
+
+**/config_dirs/obsidian/**
+**/config_dirs/obsidian/*
+**/config_dirs/obsidian/
+configs/config_files/config_dirs/Code - OSS/Cache/Cache_Data/**
+configs/config_files/config_dirs/Code - OSS/Cache/Cache_Data/*
+configs/config_files/config_dirs/Code - OSS/Cache/Cache_Data/
+

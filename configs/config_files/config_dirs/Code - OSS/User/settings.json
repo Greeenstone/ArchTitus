@@ -4,7 +4,6 @@
     "r.rpath.linux": "/bin/R",
     "terminal.integrated.fontSize": 18,
     "r.bracketedPaste": true,
-    "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "code-runner.clearPreviousOutput": true,
     "code-runner.saveAllFilesBeforeRun": true,
@@ -136,5 +135,6 @@
         "./": "${workspaceRoot}",
     },
     "path-intellisense.autoSlashAfterDirectory": true,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": -2
 }
