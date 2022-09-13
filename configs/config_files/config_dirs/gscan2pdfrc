@@ -67,23 +67,11 @@
    "default-scan-options" : {
       "backend" : [
          {
-            "source" : "ADF"
-         },
-         {
-            "br-y" : 297
-         },
-         {
-            "br-x" : 215.899993896484
-         },
-         {
-            "tl-x" : 6
+            "resolution" : 600
          }
-      ],
-      "frontend" : {
-         "num_pages" : 0
-      }
+      ]
    },
-   "device" : "airscan:w0:EPSON ET-4800 Series",
+   "device" : "epson2:net:192.168.1.78",
    "device blacklist" : null,
    "device list" : [
       {
@@ -94,11 +82,11 @@
          "vendor" : "Noname"
       },
       {
-         "label" : "WSD EPSON ET-4800 Series",
-         "model" : "EPSON ET-4800 Series",
-         "name" : "airscan:w0:EPSON ET-4800 Series",
-         "type" : "ip=192.168.1.78",
-         "vendor" : "WSD"
+         "label" : "Epson PID",
+         "model" : "PID",
+         "name" : "epson2:net:192.168.1.78",
+         "type" : "flatbed scanner",
+         "vendor" : "Epson"
       }
    ],
    "downsample" : 0,
@@ -133,7 +121,7 @@
    "rotate reverse" : 0,
    "scan prefix" : "",
    "scan-reload-triggers" : "mode",
-   "scan_window_height" : 538,
+   "scan_window_height" : 537,
    "scan_window_width" : 745,
    "selection" : {
       "height" : 0,
@@ -149,15 +137,6 @@
    "threshold-before-ocr" : 1,
    "thumb panel" : 100,
    "tiff compression" : null,
-   "timezone offset" : [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-   ],
    "title" : "",
    "title-suggestions" : [],
    "to_png" : 1,
@@ -204,9 +183,9 @@
       "x" : 1,
       "y" : 1
    },
-   "window_height" : 1175,
+   "window_height" : 1415,
    "window_maximize" : 1,
-   "window_width" : 1920,
+   "window_width" : 2560,
    "window_x" : 0,
    "window_y" : 25
 }

@@ -49,6 +49,9 @@
     rm -f 0-preinstall.log  1-setup.log  2-user.log  3-post-setup.log  startup.log
 
 # create swapfile (run line by line)
+    ## remove if necessary:
+        # swapoff /swapfile
+        # rm -f /swapfile
     sudo su
     cd /
     truncate -s 0 ./swapfile
