@@ -214,8 +214,8 @@ exec --no-startup-id albert &
 			spotify.format="{title}" traffic.showname="False" traffic.format="{:.1f}" \
 			traffic.graphlen=8 progress.placeholder="" thunderbird.home=~/.thunderbird \
 			thunderbird.inboxes=mail.ethz.ch/INBOX.msf,imap.gmail.com/INBOX.msf  \
-			-t night-powerline \
-			--autohide battery
+			-t night-powerline  \
+			--autohide battery  
 			# network_traffic \
 			# thunderbird \
 			# brightness \

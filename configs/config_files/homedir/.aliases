@@ -7,10 +7,14 @@ alias uninstall="sudo pacman -Rns"
 alias remove="sudo pacman -Rns"
 alias thunderbird="GTK_THEME=Arc /bin/thunderbird"
 
+alias hamartia="ssh andrapodon@194.56.189.204"
+
+
 install() {
     echo "installing: $1  -----------------------------------"
     sudo pacman -S $1 || yay -S $1 || yay $1
 }
+
 
 # update all perlmodules
 alias perlupdate='perl -MCPAN -e "upgrade /(.\*)/"'

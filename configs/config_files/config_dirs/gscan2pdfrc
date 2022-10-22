@@ -54,24 +54,36 @@
    "convert whitespace to underscores" : "",
    "current_psh" : null,
    "current_udt" : "gimp %i",
-   "cwd" : "/home/lukas/Documents/Verwaltung/Wohnen & Immobilien/Wohnen_Mieten",
+   "cwd" : "/home/lukas/Downloads",
    "cycle sane handle" : "",
    "datetime offset" : [
-      -3,
-      -16,
-      -25,
-      -9
+      -4,
+      -1,
+      -59,
+      -52
    ],
    "default filename" : "%Da %DY-%Dm-%Dd.%De",
    "default profile" : null,
    "default-scan-options" : {
       "backend" : [
          {
-            "resolution" : 600
+            "source" : "ADF"
+         },
+         {
+            "br-x" : 215.899993896484
+         },
+         {
+            "br-y" : 297
+         },
+         {
+            "tl-x" : 6
          }
-      ]
+      ],
+      "frontend" : {
+         "num_pages" : 0
+      }
    },
-   "device" : "epson2:net:192.168.1.78",
+   "device" : "airscan:w0:EPSON ET-4800 Series",
    "device blacklist" : null,
    "device list" : [
       {
@@ -82,11 +94,11 @@
          "vendor" : "Noname"
       },
       {
-         "label" : "Epson PID",
-         "model" : "PID",
-         "name" : "epson2:net:192.168.1.78",
-         "type" : "flatbed scanner",
-         "vendor" : "Epson"
+         "label" : "WSD EPSON ET-4800 Series",
+         "model" : "EPSON ET-4800 Series",
+         "name" : "airscan:w0:EPSON ET-4800 Series",
+         "type" : "ip=192.168.1.78",
+         "vendor" : "WSD"
       }
    ],
    "downsample" : 0,
@@ -127,7 +139,7 @@
       "height" : 0,
       "width" : 0,
       "x" : 0,
-      "y" : 635.239415443592
+      "y" : 1141.51736851262
    },
    "set_timestamp" : 1,
    "subject" : "",
@@ -183,9 +195,9 @@
       "x" : 1,
       "y" : 1
    },
-   "window_height" : 1415,
+   "window_height" : 1055,
    "window_maximize" : 1,
-   "window_width" : 2560,
+   "window_width" : 1920,
    "window_x" : 0,
    "window_y" : 25
 }
